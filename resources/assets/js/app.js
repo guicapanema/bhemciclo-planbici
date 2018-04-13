@@ -8,7 +8,7 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
-
+window.moment = require('moment');
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -17,6 +17,9 @@ window.Vue = require('vue');
  */
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
+Vue.component('acompanhamento', require('./components/Acompanhamento.vue'));
+Vue.component('acompanhamento-geral', require('./components/AcompanhamentoGeral.vue'));
+Vue.component('acompanhamento-eixos', require('./components/AcompanhamentoEixos.vue'));
 
 const app = new Vue({
     el: '#app'

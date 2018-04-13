@@ -20,46 +20,7 @@
 	</div>
 </section>
 
-<section class="section">
-		<a name="acompanhe"></a>
-		<div class="container">
-			<div class="content">
-				<h1 class="has-text-centered">Acompanhe o plano</h1>
-			</div>
-		</div>
-		<div class="has-text-centered">
-			<a class="button is-primary is-active">Geral</a>
-			<a href="/planbici/eixos" class="button is-primary">Eixos</a>
-		</div>
-		<div class="columns is-vcentered">
-			<div class="column is-one-fifth has-text-right">2017</div>
-			<div class="column">
-				<input class="slider is-fullwidth" step="1" min="2017" max="2020" value="2018" type="range">
-			</div>
-			<div class="column is-one-fifth">2020</div>
-		</div>
-		<div class="box">
-			<div class="columns">
-				<div class="column is-one-fifth">Status total:</div>
-				<div class="column"><progress class="progress is-danger" value="10" max="100">90%</progress></div>
-			</div>
-			<div class="columns">
-				<div class="column is-one-fifth">Ações executadas:</div>
-				<div class="column"><progress class="progress is-danger" value="15" max="100">90%</progress></div>
-			</div>
-			<div class="columns">
-				<div class="column is-one-fifth">Ações iniciadas:</div>
-				<div class="column"><progress class="progress is-danger" value="12" max="100">90%</progress></div>
-			</div>
-			<div class="columns">
-				<div class="column is-one-fifth">Recursos assegurados:</div>
-				<div class="column"><progress class="progress is-danger" value="16" max="100">90%</progress></div>
-			</div>
-			<div class="columns">
-				<div class="column is-one-fifth">Recursos executados:</div>
-				<div class="column"><progress class="progress is-danger" value="17" max="100">90%</progress></div>
-			</div>
-		</div>
-	</div>
+<section class="section" id="app">
+	<acompanhamento></acompanhamento>
 </section>
 @endsection

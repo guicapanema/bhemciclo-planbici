@@ -19,10 +19,6 @@ Route::get('/planbici', function () {
     return view('planbici');
 });
 
-Route::get('/planbici/eixos', function () {
-    return view('eixos');
-});
-
 Route::get('/participe', function () {
     return view('participe');
 });
