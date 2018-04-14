@@ -41,7 +41,7 @@
 <script>
 	export default {
 
-		props: ['axes'],
+		props: ['actions', 'axes'],
 
 		data() {
 			return {

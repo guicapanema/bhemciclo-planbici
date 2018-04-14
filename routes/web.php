@@ -29,3 +29,5 @@ Route::get('/contato', function () {
 
 /* API Routes */
 Route::get('/api/eixos', 'AxisController@list');
+
+Route::get('/api/acoes', 'ActionController@list');

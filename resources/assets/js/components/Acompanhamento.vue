@@ -42,13 +42,22 @@
 		<div v-if="view !== 'actions'" class="content has-text-centered">
 			<h3>{{ selectedDate.format('Q[º trimestre,] YYYY') }}</h3>
 		</div>
-		<acompanhamento-geral v-if="view === 'overview'"></acompanhamento-geral>
+
+		<acompanhamento-geral
+			v-if="view === 'overview'"
+			:actions="actions"
+			:selectedDate="selectedDate">
+		</acompanhamento-geral>
+
 		<acompanhamento-eixos
 			v-if="view === 'axes'"
-			:axes="axes"></acompanhamento-eixos>
+			:axes="axes">
+		</acompanhamento-eixos>
+
 		<acompanhamento-acoes
 			v-if="view === 'actions'"
-			:axes="axes"></acompanhamento-acoes>
+			:axes="axes">
+		</acompanhamento-acoes>
 	</div>
 </template>
 
@@ -57,7 +66,8 @@
 
 		data() {
 			return {
-				axes: {},
+				actions: [],
+				axes: [],
 				startDate: moment('2017-07-01'),
 				endDate: moment('2020-12-01'),
 				selectedDate: moment(),
@@ -80,6 +90,10 @@
 			axios.get('/api/eixos?showActions=true')
 				.then(response => {
 					this.axes = response.data;
+				});
+			axios.get('/api/acoes')
+				.then(response => {
+					this.actions = response.data;
 				});
 		},
 
