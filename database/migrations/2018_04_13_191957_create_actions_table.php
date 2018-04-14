@@ -26,8 +26,8 @@ class CreateActionsTable extends Migration
 			$table->decimal('amount_forecast', 15, 2);
 			$table->decimal('quantity_forecast', 15, 2);
 			$table->string('quantity_unit');
-			$table->date('start_date_real');
-			$table->date('end_date_real');
+			$table->date('start_date_real')->nullable();
+			$table->date('end_date_real')->nullable();
 			$table->decimal('amount_budgeted', 15, 2);
 			$table->decimal('amount_invested', 15, 2);
 			$table->decimal('quantity_real', 15, 2);

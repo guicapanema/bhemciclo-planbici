@@ -22,10 +22,13 @@ class AxisController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function list()
+    public function list(Request $request)
     {
-        $axes = Axis::with(['actions'])->get();
-		return $axes;
+		if( $request->query('showActions') == 'true') {
+			return Axis::with(['actions'])->get();
+		} else {
+			return Axis::all();
+		}
     }
 
     /**

@@ -20,6 +20,7 @@ Vue.component('example-component', require('./components/ExampleComponent.vue'))
 Vue.component('acompanhamento', require('./components/Acompanhamento.vue'));
 Vue.component('acompanhamento-geral', require('./components/AcompanhamentoGeral.vue'));
 Vue.component('acompanhamento-eixos', require('./components/AcompanhamentoEixos.vue'));
+Vue.component('acompanhamento-acoes', require('./components/AcompanhamentoAcoes.vue'));
 
 const app = new Vue({
     el: '#app'

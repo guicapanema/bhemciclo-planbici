@@ -24,7 +24,7 @@
 						'is-primary': true,
 						'is-active': view === 'actions'
 						}"
-					@click="onChangeView('axes')">Ações</button>
+					@click="onChangeView('actions')">Ações</button>
 		</div>
 		<div class="columns is-vcentered is-mobile">
 			<div class="column is-one-fifth has-text-right">2017</div>
@@ -40,6 +40,9 @@
 		<acompanhamento-eixos
 			v-if="view === 'axes'"
 			:axes="axes"></acompanhamento-eixos>
+		<acompanhamento-acoes
+			v-if="view === 'actions'"
+			:axes="axes"></acompanhamento-acoes>
 	</div>
 </template>
 
@@ -68,7 +71,7 @@
 
 		mounted() {
 			this.selectedMonth = this.elapsedMonths - (this.elapsedMonths % 3);
-			axios.get('/api/eixos')
+			axios.get('/api/eixos?showActions=true')
 				.then(response => {
 					this.axes = response.data;
 				});
