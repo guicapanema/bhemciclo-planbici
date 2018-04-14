@@ -1,5 +1,52 @@
 <template>
 	<div>
+		<div class="box">
+			<div class="field is-grouped is-grouped-centered is-grouped-multiline">
+
+				<div class="control has-icons-left">
+					<span class="select">
+						<select>
+							<option selected>Todos os anos</option>
+							<option>Select dropdown</option>
+							<option>With options</option>
+						</select>
+					</span>
+					<span class="icon is-small is-left">
+						<i class="far fa-calendar"></i>
+					</span>
+				</div>
+				<div class="control has-icons-left">
+					<span class="select">
+						<select>
+							<option selected>Todos os eixos</option>
+							<option>Select dropdown</option>
+							<option>With options</option>
+						</select>
+					</span>
+					<span class="icon is-small is-left">
+						<i class="fas fa-th-large"></i>
+					</span>
+				</div>
+				<div class="control has-icons-left">
+					<span class="select">
+						<select>
+							<option selected>Qualquer status</option>
+							<option>Select dropdown</option>
+							<option>With options</option>
+						</select>
+					</span>
+					<span class="icon is-small is-left">
+						<i class="fas fa-thermometer-half"></i>
+					</span>
+				</div>
+				<div class="control has-icons-left">
+					<input class="input" type="text" placeholder="Buscar...">
+					<span class="icon is-small is-left">
+						<i class="fas fa-search fa-xs"></i>
+					</span>
+				</div>
+			</div>
+		</div>
 		<div v-for="axis of axes">
 			<div class="content">
 				<h4>{{ axis.name }}</h4>
@@ -46,7 +93,7 @@
 										</div>
 										<div class="column">
 											<strong><small>Real:</small></strong><br />
-											{{ action.end_date_real ? action.end_date_real : 'Não terminada' }}
+											{{ action.end_date_real ? action.end_date_real : 'Não finalizada' }}
 										</div>
 									</div>
 								</div>
@@ -62,11 +109,11 @@
 										R$ {{ action.amount_forecast }}
 									</div>
 									<div class="column">
-										<strong><small>Recurso garantido no PPAG ou Orçamento do ano:</small></strong><br />
+										<strong><small>Recurso garantido:</small></strong><br />
 										R$ {{ action.amount_budgeted }}
 									</div>
 									<div class="column">
-										<strong><small>Recurso investido no ano:</small></strong><br />
+										<strong><small>Recurso investido:</small></strong><br />
 										R$ {{ action.amount_invested }}
 									</div>
 								</div>
