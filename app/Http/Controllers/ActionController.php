@@ -17,6 +17,17 @@ class ActionController extends Controller
         //
     }
 
+	/**
+     * Return a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function list()
+    {
+        $actions = Action::all();
+		return $actions;
+    }
+
     /**
      * Show the form for creating a new resource.
      *

@@ -37,7 +37,9 @@
 			<h3>{{ selectedDate.format('Q[º trimestre,] YYYY') }}</h3>
 		</div>
 		<acompanhamento-geral v-if="view === 'overview'"></acompanhamento-geral>
-		<acompanhamento-eixos v-if="view === 'axes'"></acompanhamento-eixos>
+		<acompanhamento-eixos
+			v-if="view === 'axes'"
+			:axes="axes"></acompanhamento-eixos>
 	</div>
 </template>
 
@@ -46,6 +48,7 @@
 
 		data() {
 			return {
+				axes: {},
 				startDate: moment('2017-07-01'),
 				endDate: moment('2020-12-01'),
 				selectedDate: moment(),
@@ -65,6 +68,10 @@
 
 		mounted() {
 			this.selectedMonth = this.elapsedMonths - (this.elapsedMonths % 3);
+			axios.get('/api/eixos')
+				.then(response => {
+					this.axes = response.data;
+				});
 		},
 
 		methods: {

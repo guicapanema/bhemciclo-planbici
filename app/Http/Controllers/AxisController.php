@@ -17,6 +17,17 @@ class AxisController extends Controller
         //
     }
 
+	/**
+     * Return a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function list()
+    {
+        $axes = Axis::with(['actions'])->get();
+		return $axes;
+    }
+
     /**
      * Show the form for creating a new resource.
      *

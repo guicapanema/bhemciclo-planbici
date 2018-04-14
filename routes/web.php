@@ -26,3 +26,6 @@ Route::get('/participe', function () {
 Route::get('/contato', function () {
     return view('contato');
 });
+
+/* API Routes */
+Route::get('/api/eixos', 'AxisController@list');
