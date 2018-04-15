@@ -35,23 +35,33 @@
 		<div v-if="view !== 'actions'" class="columns is-vcentered is-mobile">
 			<div class="column is-one-fifth has-text-right">2017</div>
 			<div class="column">
-				<input class="slider is-fullwidth" step="3" min="0" max="42" v-model="selectedMonth" @change="onChangeSelectedMonth()" type="range">
+				<input class="slider is-fullwidth" step="3" min="0" max="39" v-model="selectedMonth" @change="onChangeSelectedMonth()" type="range">
 			</div>
 			<div class="column is-one-fifth">2020</div>
 		</div>
 		<div v-if="view !== 'actions'" class="content has-text-centered">
-			<h3>{{ selectedDate.format('Q[º trimestre,] YYYY') }}</h3>
+			<h3>
+				<span @click="onGoBackward()" class="icon is-medium has-text-info has-cursor-pointer">
+					<i class="fas fa-md fa-chevron-left"></i>
+				</span>
+				{{ selectedDate.format('Q[º trimestre,] YYYY') }}
+				<span @click="onGoForward()" class="icon is-medium has-text-info has-cursor-pointer">
+					<i class="fas fa-md fa-chevron-right"></i>
+				</span>
+			</h3>
 		</div>
 
-		<acompanhamento-geral
-			v-if="view === 'overview'"
-			:actions="actions"
-			:selectedDate="selectedDate">
-		</acompanhamento-geral>
+		<div v-if="view === 'overview'" class="box">
+			<acompanhamento-status
+				:actions="actions"
+				:selectedDate="selectedDate">
+			</acompanhamento-status>
+		</div>
 
 		<acompanhamento-eixos
 			v-if="view === 'axes'"
-			:axes="axes">
+			:axes="axes"
+			:selectedDate="selectedDate">
 		</acompanhamento-eixos>
 
 		<acompanhamento-acoes
@@ -103,6 +113,18 @@
 			},
 			onChangeSelectedMonth() {
 				this.selectedDate = moment(this.startDate).add(this.selectedMonth, 'months');
+			},
+			onGoForward() {
+				if(this.selectedMonth <= 36) {
+					this.selectedMonth += 3;
+					this.onChangeSelectedMonth();
+				}
+			},
+			onGoBackward() {
+				if(this.selectedMonth >= 3) {
+					this.selectedMonth -= 3;
+					this.onChangeSelectedMonth();
+				}
 			}
 		}
 	}
