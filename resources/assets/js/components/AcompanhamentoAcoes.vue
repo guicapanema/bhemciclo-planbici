@@ -5,10 +5,9 @@
 
 				<div class="control has-icons-left">
 					<span class="select">
-						<select>
-							<option selected>Todos os anos</option>
-							<option>Select dropdown</option>
-							<option>With options</option>
+						<select v-model="filterYear">
+							<option :value="null">Todos os anos</option>
+							<option v-for="year of availableYears" :value="year">{{ year }}</option>
 						</select>
 					</span>
 					<span class="icon is-small is-left">
@@ -17,10 +16,9 @@
 				</div>
 				<div class="control has-icons-left">
 					<span class="select">
-						<select>
-							<option selected>Todos os eixos</option>
-							<option>Select dropdown</option>
-							<option>With options</option>
+						<select v-model="filterAxis">
+							<option :value="null">Todos os eixos</option>
+							<option v-for="axis of availableAxes" :value="axis">{{ axis }}</option>
 						</select>
 					</span>
 					<span class="icon is-small is-left">
@@ -29,10 +27,9 @@
 				</div>
 				<div class="control has-icons-left">
 					<span class="select">
-						<select>
-							<option selected>Qualquer status</option>
-							<option>Select dropdown</option>
-							<option>With options</option>
+						<select v-model="filterStatus">
+							<option :value="null">Qualquer status</option>
+							<option v-for="status of availableStatuses" :value="status">{{ status }}</option>
 						</select>
 					</span>
 					<span class="icon is-small is-left">
@@ -40,19 +37,19 @@
 					</span>
 				</div>
 				<div class="control has-icons-left">
-					<input class="input" type="text" placeholder="Buscar...">
+					<input v-model="filterSearch" class="input" type="text" placeholder="Buscar...">
 					<span class="icon is-small is-left">
 						<i class="fas fa-search fa-xs"></i>
 					</span>
 				</div>
 			</div>
 		</div>
-		<div v-for="axis of axes">
+		<div v-for="axis of displayedAxes">
 			<div class="content">
 				<h4>{{ axis.name }}</h4>
 			</div>
 			<div class="columns is-multiline">
-				<div v-for="action of axis.actions" class="column is-half">
+				<div v-for="action of displayedActions(axis)" class="column is-half">
 					<div class="card">
 						<header class="card-header">
 							<p class="card-header-title">
@@ -147,20 +144,79 @@
 <script>
 	export default {
 
-		props: ['axes'],
+		props: ['actions', 'axes'],
 
 		data() {
 			return {
+				availableYears: [2017, 2018, 2019, 2020],
+				availableStatuses: ['No prazo', 'Início atrasado', 'Término atrasado', 'Concluída', 'Prevista'],
+				filterAxis: null,
+				filterYear: null,
+				filterStatus: null,
+				filterSearch: ''
 			}
 		},
 
 		computed: {
+			availableAxes() {
+				let axes = [];
+				for(let axis of this.axes) {
+					axes.push(axis.name);
+				}
+				return axes
+			},
+			displayedAxes() {
+				if (!this.filterAxis) {
+					return this.axes;
+				} else {
+					return this.axes.filter(axis => axis.name === this.filterAxis);
+				}
+			}
 		},
 
 		mounted() {
 		},
 
 		methods: {
+			displayedActions(axis) {
+				return axis.actions.filter(action => {
+					let matchYear = true;
+					let matchStatus = true;
+					let matchSearch = true;
+
+					if (this.filterYear) {
+						let startDate = moment(action.start_date_forecast);
+						let endDate = moment(action.end_date_forecast);
+						matchYear = (startDate.year() <= this.filterYear) && (this.filterYear <= endDate.year());
+					}
+
+					if (this.filterStatus) {
+						matchStatus = this.filterStatus === this.getStatus(action);
+					}
+
+					if (this.filterSearch.length) {
+						matchSearch = JSON.stringify(action).toLowerCase().indexOf(this.filterSearch.trim().toLowerCase()) >= 0;
+					}
+
+					return matchYear && matchStatus && matchSearch
+				});
+			},
+			getStatus(action) {
+				if (moment(action.end_date_forecast).isAfter(this.selectedDate)) { // No prazo
+					return this.availableStatuses[0];
+				} else if (moment(action.start_date_forecast).isBefore(this.selectedDate) &&
+					(!action.start_date_real || moment(action.start_date_real).isAfter(this.selectedDate))) { // Início atrasado
+						return this.availableStatuses[1];
+				} else if (moment(action.end_date_forecast).isBefore(this.selectedDate) &&
+					(!action.end_date_real || moment(action.end_date_real).isAfter(this.selectedDate))) { // Término atrasado
+						return this.availableStatuses[2];
+				} else if (moment(action.end_date_real).isSameOrBefore(this.selectedDate)) { // Concluída
+						return this.availableStatuses[3];
+				} else if (moment(action.start_date_forecast).isSameOrAfter(this.selectedDate) &&
+					(!action.start_date_real || moment(action.start_date_real).isAfter(this.selectedDate))) { // Prevista
+						return this.availableStatuses[4];
+				}
+			}
 		}
 	}
 </script>

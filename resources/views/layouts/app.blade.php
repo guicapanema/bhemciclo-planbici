@@ -13,7 +13,7 @@
 	<!-- Styles -->
 	<link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-	<link href="https://use.fontawesome.com/releases/v5.0.3/css/all.css" rel="stylesheet">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"></script>
 </head>
 <body>
 	<nav class="navbar is-fixed-top is-primary">
