@@ -169,7 +169,7 @@
 				);
 			},
 			lateEndActions() {
-				return this.startedActions.filter(action =>
+				return this.actions.filter(action =>
 					moment(action.end_date_forecast).isBefore(this.selectedDate) &&
 					(!action.end_date_real || moment(action.end_date_real).isAfter(this.selectedDate))
 				);
@@ -178,7 +178,7 @@
 				return this.startedActions.filter(action => moment(action.end_date_real).isSameOrBefore(this.selectedDate));
 			},
 			shouldBeDoneActions() {
-				return this.startedActions.filter(action => moment(action.end_date_forecast).isSameOrBefore(this.selectedDate));
+				return this.actions.filter(action => moment(action.end_date_forecast).isSameOrBefore(this.selectedDate));
 			},
 			donePercentage() {
 				if (this.shouldBeDoneActions.length > 0) {
@@ -188,8 +188,8 @@
 			},
 			forecastActions() {
 				return this.actions.filter(action =>
-					moment(action.start_date_forecast).isAfter(this.selectedDate) &&
-					moment(action.start_date_real).isAfter(this.selectedDate)
+					moment(action.start_date_forecast).isSameOrAfter(this.selectedDate) &&
+					(!action.start_date_real || moment(action.start_date_real).isAfter(this.selectedDate))
 				);
 			},
 			amountBudgeted() {
@@ -214,7 +214,7 @@
 			},
 			amountInvested() {
 				let amountInvested = 0;
-				for (let action of this.shouldHaveStartedActions) {
+				for (let action of this.startedActions) {
 					amountInvested += action.amount_invested;
 				}
 				return amountInvested;
