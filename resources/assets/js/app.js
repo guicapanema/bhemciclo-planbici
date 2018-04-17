@@ -23,6 +23,7 @@ Vue.component('acompanhamento-status', require('./components/AcompanhamentoStatu
 Vue.component('acompanhamento-eixos', require('./components/AcompanhamentoEixos.vue'));
 Vue.component('acompanhamento-acoes', require('./components/AcompanhamentoAcoes.vue'));
 Vue.component('noticias', require('./components/Noticias.vue'));
+Vue.component('legislativo', require('./components/Legislativo.vue'));
 
 const app = new Vue({
     el: '#app'

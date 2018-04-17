@@ -24,3 +24,40 @@
 	background: url('/img/hero-home.jpg');
 	background-size: cover;
 }
+
+.hero-home > .hero-body {
+	background-color: rgba(0,0,0,0.5);
+}
+
+/* Página Apoie */
+
+.councilor-overlay, .councilor-overlay-hover {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0.5;
+}
+
+.councilor-overlay-hover {
+	opacity: 0;
+	transition: .2s ease;
+}
+
+figure:hover .councilor-overlay-hover {
+	opacity: 1;
+}
+
+.councilor-overlay-hover > .text {
+	color: white;
+	font-size: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	text-align: center;
+}
