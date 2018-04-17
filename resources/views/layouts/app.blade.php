@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}" class="has-navbar-fixed-top">
+<html lang="{{ app()->getLocale() }}">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,7 +15,7 @@
 
 	<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"></script>
 </head>
-<body>
+<body class="has-navbar-fixed-top">
 	<nav class="navbar is-fixed-top is-primary">
 		<div class="navbar-brand">
 			<a class="navbar-item">

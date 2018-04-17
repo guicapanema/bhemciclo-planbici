@@ -5,11 +5,7 @@
 @import "~bulma/bulma";
 @import "~bulma-slider/dist/bulma-slider";
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-}
-
+/* Classes de uso geral */
 .is-marginless {
 	margin-bottom: 0 !important;
 }
@@ -20,4 +16,11 @@
 
 .has-cursor-pointer {
 	cursor: pointer;
+}
+
+/* Página de Início */
+
+.hero-home {
+	background: url('/img/hero-home.jpg');
+	background-size: cover;
 }
