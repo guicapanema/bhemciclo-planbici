@@ -9,6 +9,8 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 window.moment = require('moment');
+moment.locale('pt');
+window.Parser = require('rss-parser');
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -16,11 +18,11 @@ window.moment = require('moment');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
 Vue.component('acompanhamento', require('./components/Acompanhamento.vue'));
 Vue.component('acompanhamento-status', require('./components/AcompanhamentoStatus.vue'));
 Vue.component('acompanhamento-eixos', require('./components/AcompanhamentoEixos.vue'));
 Vue.component('acompanhamento-acoes', require('./components/AcompanhamentoAcoes.vue'));
+Vue.component('noticias', require('./components/Noticias.vue'));
 
 const app = new Vue({
     el: '#app'

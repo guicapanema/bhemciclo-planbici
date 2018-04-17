@@ -65,64 +65,7 @@
 					<h1 class="has-text-centered">Notícias</h1>
 				</div>
 			</div>
-			<div class="columns">
-				<div class="column">
-					<div class="card">
-						<header class="card-header">
-							<p class="card-header-title">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-							</p>
-						</header>
-						<div class="card-content">
-							<div class="content">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec tempor velit. Proin facilisis viverra odio vulputate auctor. Curabitur finibus, mauris a euismod mattis, magna sapien sodales neque, sed posuere sem velit eget ipsum. </p>
-								<p>Praesent molestie, lacus vitae lobortis placerat, nibh leo vulputate lectus, vitae gravida nisi dolor vitae elit...</p>
-								<time class="has-text-grey" datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-							</div>
-						</div>
-						<footer class="card-footer">
-							<a href="#" class="card-footer-item">Leia mais</a>
-						</footer>
-					</div>
-				</div>
-				<div class="column">
-					<div class="card">
-						<header class="card-header">
-							<p class="card-header-title">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-							</p>
-						</header>
-						<div class="card-content">
-							<div class="content">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec tempor velit. Proin facilisis viverra odio vulputate auctor. Curabitur finibus, mauris a euismod mattis, magna sapien sodales neque, sed posuere sem velit eget ipsum...</p>
-								<time class="has-text-grey" datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-							</div>
-						</div>
-						<footer class="card-footer">
-							<a href="#" class="card-footer-item">Leia mais</a>
-						</footer>
-					</div>
-				</div>
-				<div class="column">
-					<div class="card">
-						<header class="card-header">
-							<p class="card-header-title">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-							</p>
-						</header>
-						<div class="card-content">
-							<div class="content">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec tempor velit. Proin facilisis viverra odio vulputate auctor. Curabitur finibus, mauris a euismod mattis, magna sapien sodales neque, sed posuere sem velit eget ipsum. </p>
-								<p>Praesent molestie, lacus vitae lobortis placerat, nibh leo vulputate lectus, vitae gravida nisi dolor vitae elit...</p>
-								<time class="has-text-grey" datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-							</div>
-						</div>
-						<footer class="card-footer">
-							<a href="#" class="card-footer-item">Leia mais</a>
-						</footer>
-					</div>
-				</div>
-			</div>
+			<noticias></noticias>
 		</div>
 	</section>
 

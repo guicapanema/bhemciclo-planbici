@@ -1,0 +1,53 @@
+<template>
+	<div class="columns">
+		<div v-for="article of news" class="column">
+			<div class="card">
+				<header class="card-header">
+					<p class="card-header-title">
+						{{ article.title }}
+					</p>
+				</header>
+				<div class="card-content">
+					<div class="content">
+						<div v-html="article.content"></div>
+						<div class="has-text-right">
+							<time :datetime="articleDateTime(article)" class="has-text-grey">{{ articleLocalizedDate(article) }}</time>
+						</div>
+					</div>
+				</div>
+				<footer class="card-footer">
+					<a :href="article.link" target="_blank" class="card-footer-item">Leia mais</a>
+				</footer>
+			</div>
+		</div>
+	</div>
+</template>
+
+<script>
+
+    export default {
+		data() {
+			return {
+				news: []
+			}
+		},
+        mounted() {
+            let parser = new Parser();
+			parser.parseURL('/api/news')
+				.then(entity => {
+					for (let item of entity.items) {
+						this.news.push(item);
+					}
+					this.news = this.news.splice(0, 3);
+				});
+        },
+		methods: {
+			articleLocalizedDate(article) {
+				return moment(article.isoDate).format('LT [-] LL');
+			},
+			articleDateTime(article) {
+				return moment(article.isoDate).format('YYYY[-]M[-]D');
+			}
+		}
+    }
+</script>

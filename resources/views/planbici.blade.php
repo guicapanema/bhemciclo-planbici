@@ -30,7 +30,7 @@
 	</div>
 </section>
 
-<section class="section" id="app">
+<section class="section">
 	<acompanhamento></acompanhamento>
 </section>
 @endsection

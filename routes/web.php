@@ -31,3 +31,5 @@ Route::get('/contato', function () {
 Route::get('/api/eixos', 'AxisController@list');
 
 Route::get('/api/acoes', 'ActionController@list');
+
+Route::get('/api/news', 'NewsController@list');
