@@ -36,7 +36,7 @@
 
 				<div class="field is-pulled-right">
 					<div class="control">
-						<button type="submit" class="button is-primary">Cadastrar</button>
+						<button type="submit" class="button is-warning">Cadastrar</button>
 					</div>
 				</div>
 			</form>
@@ -44,11 +44,11 @@
 
 		<div class="columns">
 			<div class="column content">
-				<h2>Faça um vídeo pessoal de apoio ao PlanBici</h2>
+				<h2>FAÇA um vídeo pessoal de apoio ao PlanBici</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et ullamcorper nulla. Quisque mollis, purus at porttitor mollis, nunc orci euismod neque, sit amet varius dui erat bibendum nisl.</p>
 			</div>
 			<div class="column content">
-				<h2>Participe do GT Pedala BH</h2>
+				<h2>PARTICIPE do GT Pedala BH</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et ullamcorper nulla. Quisque mollis, purus at porttitor mollis, nunc orci euismod neque, sit amet varius dui erat bibendum nisl.</p>
 			</div>
 		</div>
@@ -82,7 +82,7 @@
 <section class="section">
 	<div class="content">
 		<h1 class="has-text-centered">Faça barulho!</h1>
-		<div class="has-text-centered"><a class="button is-large is-primary">Cobre da prefeitura</a></div>
+		<div class="has-text-centered"><a class="button is-large is-warning">Cobre da prefeitura</a></div>
 	</div>
 
 	<div class="columns">

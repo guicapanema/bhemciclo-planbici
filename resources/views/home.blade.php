@@ -45,14 +45,14 @@
 			</div>
 		</div>
 	</section>
-	<section class="section notification is-primary">
+	<section class="section notification is-light">
 		<div class="content">
 			<div class="columns">
 				<div class="column is-8 is-offset-2">
-					<h1 class="has-text-centered has-text-white">Apoie!</h1>
+					<h1 class="has-text-centered">Apoie!</h1>
 					<p>Se você acredita que Belo Horizonte pode ser mais amigável para o uso da bicicleta e apoia a execução do PlanBici-BH, junte-se a nós para mostrarmos à Prefeitura que, sim, <strong>#BHPedala</strong>.</p>
 					<p class="has-text-centered">
-						<a class="button is-medium is-info has-text-weight-bold" href="/participe">Quero saber mais</a>
+						<a class="button is-medium is-primary has-text-weight-bold" href="/participe">Quero saber mais</a>
 					</p>
 				</div>
 			</div>

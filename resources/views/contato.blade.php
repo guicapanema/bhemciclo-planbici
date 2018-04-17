@@ -44,7 +44,7 @@
 
 				<div class="field is-pulled-right">
 					<div class="control">
-						<button type="submit" class="button is-primary">Enviar</button>
+						<button type="submit" class="button is-success">Enviar</button>
 					</div>
 				</div>
 			</form>

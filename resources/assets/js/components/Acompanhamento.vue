@@ -10,7 +10,8 @@
 			<div class="control">
 				<button :class="{
 							'button': true,
-							'is-primary': true,
+							'is-danger': true,
+							'is-outlined': view !== 'overview',
 							'is-active': view === 'overview'
 							}"
 						@click="onChangeView('overview')">Geral</button>
@@ -18,7 +19,8 @@
 			<div class="control">
 				<button :class="{
 							'button': true,
-							'is-primary': true,
+							'is-danger': true,
+							'is-outlined': view !== 'axes',
 							'is-active': view === 'axes'
 							}"
 						@click="onChangeView('axes')">Eixos</button>
@@ -26,7 +28,8 @@
 			<div class="control">
 				<button :class="{
 							'button': true,
-							'is-primary': true,
+							'is-danger': true,
+							'is-outlined': view !== 'actions',
 							'is-active': view === 'actions'
 							}"
 						@click="onChangeView('actions')">Ações</button>
@@ -35,17 +38,17 @@
 		<div v-if="view !== 'actions'" class="columns is-vcentered is-mobile">
 			<div class="column is-one-fifth has-text-right">2017</div>
 			<div class="column">
-				<input class="slider is-fullwidth" step="3" min="0" max="39" v-model="selectedMonth" @change="onChangeSelectedMonth()" type="range">
+				<input class="slider is-fullwidth is-danger" step="3" min="0" max="39" v-model="selectedMonth" @change="onChangeSelectedMonth()" type="range">
 			</div>
 			<div class="column is-one-fifth">2020</div>
 		</div>
 		<div v-if="view !== 'actions'" class="content has-text-centered">
 			<h3 class="is-inline-flex">
-				<span @click="onGoBackward()" class="icon is-medium has-text-info has-cursor-pointer">
+				<span @click="onGoBackward()" class="icon is-medium has-text-danger has-cursor-pointer">
 					<i class="fas fa-md fa-chevron-left"></i>
 				</span>
 				{{ selectedDate.format('Q[º trimestre,] YYYY') }}
-				<span @click="onGoForward()" class="icon is-medium has-text-info has-cursor-pointer">
+				<span @click="onGoForward()" class="icon is-medium has-text-danger has-cursor-pointer">
 					<i class="fas fa-md fa-chevron-right"></i>
 				</span>
 			</h3>

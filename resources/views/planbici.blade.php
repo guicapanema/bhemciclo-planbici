@@ -2,7 +2,7 @@
 
 @section('content')
 
-<section class="section notification is-light">
+<section class="section">
 	<div class="container">
 		<div class="content">
 			<h1 class="has-text-centered">O PlanBici</h1>
@@ -25,12 +25,12 @@
 				<li>Financiamento</li>
 			</ol>
 
-			<div class="has-text-centered"><a class="button is-medium is-primary">Veja o documento completo</a></div>
+			<div class="has-text-centered"><a class="button is-medium is-danger">Veja o documento completo</a></div>
 		</div>
 	</div>
 </section>
 
-<section class="section">
+<section class="section notification is-light">
 	<acompanhamento></acompanhamento>
 </section>
 @endsection

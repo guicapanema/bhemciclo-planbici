@@ -16,7 +16,7 @@
 					</div>
 				</div>
 				<footer class="card-footer">
-					<a :href="article.link" target="_blank" class="card-footer-item">Leia mais</a>
+					<a :href="article.link" target="_blank" class="card-footer-item has-text-primary has-text-weight-bold">Leia mais</a>
 				</footer>
 			</div>
 		</div>
