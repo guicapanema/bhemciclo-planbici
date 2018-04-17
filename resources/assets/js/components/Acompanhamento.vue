@@ -40,7 +40,7 @@
 			<div class="column is-one-fifth">2020</div>
 		</div>
 		<div v-if="view !== 'actions'" class="content has-text-centered">
-			<h3>
+			<h3 class="is-inline-flex">
 				<span @click="onGoBackward()" class="icon is-medium has-text-info has-cursor-pointer">
 					<i class="fas fa-md fa-chevron-left"></i>
 				</span>

@@ -3,37 +3,37 @@
 			<div class="columns">
 				<div class="column is-one-third">Status total:</div>
 				<div class="column">
-					<div class="buttons">
-						<button class="button is-status-button is-info">
-							<span>
-								<strong>{{ onTimeActions.length }}</strong><br />
-								<em>no prazo</em>
-							</span>
-						</button>
-						<button class="button is-status-button is-danger">
-							<span>
-								<strong>{{ lateStartActions.length }}</strong><br />
-								<em>início atrasado</em>
-							</span>
-						</button>
-						<button class="button is-status-button is-warning">
-							<span>
-								<strong>{{ lateEndActions.length }}</strong><br />
-								<em>término atrasado</em>
-							</span>
-						</button>
-						<button class="button is-status-button is-success">
-							<span>
-								<strong>{{ doneActions.length }}</strong><br />
-								<em>concluídas</em>
-							</span>
-						</button>
-						<button class="button is-status-button is-light">
-							<span>
-								<strong>{{ forecastActions.length }}</strong><br />
-								<em>previstas</em>
-							</span>
-						</button>
+					<div class="field is-grouped is-grouped-multiline">
+						<div class="control">
+							<div class="tags has-addons">
+								<span class="tag is-dark has-text-weight-bold">{{ onTimeActions.length }}</span>
+								<span class="tag is-info">no prazo</span>
+							</div>
+						</div>
+						<div class="control">
+							<div class="tags has-addons">
+								<span class="tag is-dark has-text-weight-bold">{{ lateStartActions.length }}</span>
+								<span class="tag is-danger">início atrasado</span>
+							</div>
+						</div>
+						<div class="control">
+							<div class="tags has-addons">
+								<span class="tag is-dark has-text-weight-bold">{{ lateEndActions.length }}</span>
+								<span class="tag is-warning">término atrasado</span>
+							</div>
+						</div>
+						<div class="control">
+							<div class="tags has-addons">
+								<span class="tag is-dark has-text-weight-bold">{{ doneActions.length }}</span>
+								<span class="tag is-success">concluídas</span>
+							</div>
+						</div>
+						<div class="control">
+							<div class="tags has-addons">
+								<span class="tag is-dark has-text-weight-bold">{{ forecastActions.length }}</span>
+								<span class="tag is-light">previstas</span>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
