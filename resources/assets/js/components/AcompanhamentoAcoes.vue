@@ -153,7 +153,8 @@
 				filterAxis: null,
 				filterYear: null,
 				filterStatus: null,
-				filterSearch: ''
+				filterSearch: '',
+				currentDate: moment()
 			}
 		},
 
@@ -202,18 +203,19 @@
 				});
 			},
 			getStatus(action) {
-				if (moment(action.end_date_forecast).isAfter(this.selectedDate)) { // No prazo
+				if (moment(action.start_date_real).isAfter(this.currentDate) &&
+					moment(action.end_date_forecast).isAfter(this.currentDate)) { // No prazo
 					return this.availableStatuses[0];
-				} else if (moment(action.start_date_forecast).isBefore(this.selectedDate) &&
-					(!action.start_date_real || moment(action.start_date_real).isAfter(this.selectedDate))) { // Início atrasado
+				} else if (moment(action.start_date_forecast).isBefore(this.currentDate) &&
+					(!action.start_date_real || moment(action.start_date_real).isAfter(this.currentDate))) { // Início atrasado
 						return this.availableStatuses[1];
-				} else if (moment(action.end_date_forecast).isBefore(this.selectedDate) &&
-					(!action.end_date_real || moment(action.end_date_real).isAfter(this.selectedDate))) { // Término atrasado
+				} else if (moment(action.end_date_forecast).isBefore(this.currentDate) &&
+					(!action.end_date_real || moment(action.end_date_real).isAfter(this.currentDate))) { // Término atrasado
 						return this.availableStatuses[2];
-				} else if (moment(action.end_date_real).isSameOrBefore(this.selectedDate)) { // Concluída
+				} else if (moment(action.end_date_real).isSameOrBefore(this.currentDate)) { // Concluída
 						return this.availableStatuses[3];
-				} else if (moment(action.start_date_forecast).isSameOrAfter(this.selectedDate) &&
-					(!action.start_date_real || moment(action.start_date_real).isAfter(this.selectedDate))) { // Prevista
+				} else if (moment(action.start_date_forecast).isSameOrAfter(this.currentDate) &&
+					(!action.start_date_real || moment(action.start_date_real).isAfter(this.currentDate))) { // Prevista
 						return this.availableStatuses[4];
 				}
 			}
