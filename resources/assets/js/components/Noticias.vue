@@ -2,13 +2,14 @@
 	<div class="columns">
 		<div v-for="article of news" class="column">
 			<div class="card">
-				<header class="card-header">
-					<p class="card-header-title">
-						{{ article.title }}
-					</p>
-				</header>
+				<div v-if="articleImage(article['content:encoded'])" class="card-image">
+					<figure class="image is-marginless">
+						<img :src="articleImage(article['content:encoded'])" alt="Imagem do post">
+					</figure>
+				</div>
 				<div class="card-content">
 					<div class="content">
+						<h4 class="title">{{ article.title }}</h4>
 						<div v-html="article.content"></div>
 						<div class="has-text-right">
 							<time :datetime="articleDateTime(article)" class="has-text-grey">{{ articleLocalizedDate(article) }}</time>
@@ -47,6 +48,12 @@
 			},
 			articleDateTime(article) {
 				return moment(article.isoDate).format('YYYY[-]M[-]D');
+			},
+			articleImage(content) {
+				let div = document.createElement('div');
+				div.innerHTML = content;
+				let firstImage = div.getElementsByTagName('img')[0]
+				return firstImage ? firstImage.getAttribute("src") : null;
 			}
 		}
     }
