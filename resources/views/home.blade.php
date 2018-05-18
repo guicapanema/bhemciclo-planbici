@@ -66,6 +66,9 @@
 				</div>
 			</div>
 			<noticias></noticias>
+			<div class="container has-text-centered">
+				<a class="button is-medium is-primary has-text-weight-bold" href="http://bhemciclo.org/noticias/">Ver mais notícias</a>
+			</div>
 		</div>
 	</section>
 

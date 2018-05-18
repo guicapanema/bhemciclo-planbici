@@ -15,8 +15,8 @@
 
 	<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"></script>
 </head>
-<body>
-	<nav class="navbar is-spaced is-white">
+<body class="has-navbar-fixed-top">
+	<nav class="navbar is-fixed-top is-white">
 		<div class="container">
 			<div class="navbar-brand has-text-weight-bold">
 				<a class="navbar-item">
@@ -68,6 +68,51 @@
 	<div id="app">
 		@yield('content')
 	</div>
+	<footer class="footer">
+		<div class="container has-margin-bottom-100">
+			<div class="columns is-centered">
+				<div class="column is-narrow content">
+					<h5 class="is-marginless">#euqueroplanbici</h5>
+				</div>
+			</div>
+			<div class="columns is-centered">
+				<div class="column is-narrow">
+					<figure class="image is-48x48">
+						<a href="https://www.facebook.com/dialog/share?app_id=390669861344505&display=popup&href=https://planbicibh.org&redirect_uri=https://planbicibh.org" target="_blank">
+							<img src="/img/facebook.png"></img>
+						</a>
+					</figure>
+				</div>
+				<div class="column is-narrow">
+					<figure class="image is-48x48">
+						<a href="https://twitter.com/intent/tweet?text=Conheça%2C compreenda e avalie o Plano de Mobilidade por bicicleta de BH - %E2%80%8B%23euqueroplanbici !%20%0Ahttps%3A%2F%2Fplanbicibh.org%2F%0AVia %40bhemciclo" target="_blank">
+							<img src="/img/twitter.png"></img>
+						</a>
+					</figure>
+				</div>
+				<div class="column is-narrow">
+					<a href="https://www.instagram.com/explore/tags/euqueroplanbici/" target="_blank">
+						<figure class="image is-48x48">
+							<img src="/img/instagram.png"></img>
+						</figure>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="content has-text-centered">
+				<p>
+					Código fonte sob licença <a rel="license" href="https://www.gnu.org/licenses/agpl-3.0.html">AGPLv3</a>.
+					<a href="https://github.com/guicapanema/bhemciclo-planbici"><span class="icon">
+						<i class="fab fa-github"></i>
+					</span></a>
+				</p>
+				<p>
+					Conteúdo sob licença <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Atribuição 4.0 Internacional</a>.
+				</p>
+			</div>
+		</div>
+	</footer>
 	<!-- Scripts -->
 	<script src="{{ asset('js/app.js') }}"></script>
 </body>
