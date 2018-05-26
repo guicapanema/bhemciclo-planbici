@@ -52,6 +52,13 @@
 // 	content: '\f206' !important;
 // }
 
+.is-delayed {
+	background-image: url('/img/atrasado.jpg');
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 100px;
+}
+
 /* Página Apoie */
 
 .councilor-overlay, .councilor-overlay-hover {

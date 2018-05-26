@@ -56,7 +56,7 @@
 								{{ action.name }}
 							</p>
 						</header>
-						<div class="card-content">
+						<div :class="{'card-content': true, 'is-delayed': getDelay(action)}">
 							<div class="columns is-mobile has-text-centered">
 								<div class="column">
 									<div>
@@ -149,7 +149,7 @@
 		data() {
 			return {
 				availableYears: [2017, 2018, 2019, 2020],
-				availableStatuses: ['No prazo', 'Início atrasado', 'Término atrasado', 'Concluída', 'Prevista'],
+				availableStatuses: ['Não iniciada', 'Em andamento', 'Concluída'],
 				filterAxis: null,
 				filterYear: null,
 				filterStatus: null,
@@ -203,21 +203,16 @@
 				});
 			},
 			getStatus(action) {
-				if (moment(action.start_date_real).isAfter(this.currentDate) &&
-					moment(action.end_date_forecast).isAfter(this.currentDate)) { // No prazo
+				if (!action.start_date_real || moment(action.start_date_real).isAfter(this.currentDate)) { // Não iniciada
 					return this.availableStatuses[0];
-				} else if (moment(action.start_date_forecast).isBefore(this.currentDate) &&
-					(!action.start_date_real || moment(action.start_date_real).isAfter(this.currentDate))) { // Início atrasado
+				} else if (moment(action.start_date_real).isSameOrBefore(this.currentDate)) { // Em andamento
 						return this.availableStatuses[1];
-				} else if (moment(action.end_date_forecast).isBefore(this.currentDate) &&
-					(!action.end_date_real || moment(action.end_date_real).isAfter(this.currentDate))) { // Término atrasado
-						return this.availableStatuses[2];
 				} else if (moment(action.end_date_real).isSameOrBefore(this.currentDate)) { // Concluída
-						return this.availableStatuses[3];
-				} else if (moment(action.start_date_forecast).isSameOrAfter(this.currentDate) &&
-					(!action.start_date_real || moment(action.start_date_real).isAfter(this.currentDate))) { // Prevista
-						return this.availableStatuses[4];
+						return this.availableStatuses[2];
 				}
+			},
+			getDelay(action) {
+				return (!action.start_date_real && moment(action.start_date_forecast).isSameOrBefore(this.currentDate));
 			}
 		}
 	}
