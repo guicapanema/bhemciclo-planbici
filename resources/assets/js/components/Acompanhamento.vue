@@ -35,6 +35,7 @@
 						@click="onChangeView('actions')">Ações</button>
 			</div>
 		</div>
+
 		<div v-if="view !== 'actions'" class="columns is-vcentered is-mobile">
 			<div class="column is-one-fifth has-text-right">2017</div>
 			<div class="column">

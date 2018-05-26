@@ -22,6 +22,7 @@ Vue.component('acompanhamento', require('./components/Acompanhamento.vue'));
 Vue.component('acompanhamento-status', require('./components/AcompanhamentoStatus.vue'));
 Vue.component('acompanhamento-eixos', require('./components/AcompanhamentoEixos.vue'));
 Vue.component('acompanhamento-acoes', require('./components/AcompanhamentoAcoes.vue'));
+Vue.component('chart', require('./components/Chart.vue'));
 Vue.component('noticias', require('./components/Noticias.vue'));
 Vue.component('legislativo', require('./components/Legislativo.vue'));
 

@@ -3,6 +3,8 @@
 
 // Bulma
 @import "~bulma/bulma";
+
+
 @import "~bulma-slider/dist/bulma-slider";
 
 /* Classes de uso geral */
@@ -32,6 +34,23 @@
 .hero-home > .hero-body {
 	background-color: rgba(0,0,0,0.5);
 }
+
+/* Página Acompanhe */
+
+// /* Special styling for WebKit/Blink */
+// input[type=range]::-webkit-slider-thumb {
+//   content: '\f206' !important;
+// }
+//
+// /* All the same stuff for Firefox */
+// input[type=range]::-moz-range-thumb {
+// 	content: '\f206' !important;
+// }
+//
+// /* All the same stuff for IE */
+// input[type=range]::-ms-thumb {
+// 	content: '\f206' !important;
+// }
 
 /* Página Apoie */
 
