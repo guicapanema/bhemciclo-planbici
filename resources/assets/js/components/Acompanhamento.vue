@@ -38,7 +38,7 @@
 		<div v-if="view !== 'actions'" class="columns is-vcentered is-mobile">
 			<div class="column is-one-fifth has-text-right">2017</div>
 			<div class="column">
-				<input class="slider is-fullwidth is-danger" step="3" min="0" max="39" v-model="selectedMonth" @change="onChangeSelectedMonth()" type="range">
+				<input class="slider is-fullwidth is-danger" step="3" min="0" max="39" v-model.number="selectedMonth" @change="onChangeSelectedMonth()" type="range">
 			</div>
 			<div class="column is-one-fifth">2020</div>
 		</div>
