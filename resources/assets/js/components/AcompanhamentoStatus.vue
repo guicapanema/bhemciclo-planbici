@@ -1,7 +1,11 @@
 <template>
 		<div>
 			<div class="columns">
-				<div class="column is-half">
+				<div :class="{
+					'column': true,
+					'is-half': true,
+					'is-future': selectedDate.isAfter(currentDate)
+					}">
 					<div class="content has-text-centered">
 						<h3 class="title">Como está</h3>
 					</div>
@@ -44,6 +48,7 @@
 
 		data() {
 			return {
+				currentDate: moment(),
 				view: 'actions'
 			}
 		},
@@ -109,7 +114,7 @@
 						.map(action => action.amount_forecast)
 						.reduce((prev, next) => prev + next)
 						: 0;
-						
+
 					return [notStartedInvestments, inProgressInvestments, doneInvestments];
 				}
 			}
@@ -125,8 +130,14 @@
 </script>
 
 <style scoped>
+
 .chart {
 	max-width: 400px;
 	margin: auto;
 }
+
+.is-future {
+	opacity: 0.5;
+}
+
 </style>

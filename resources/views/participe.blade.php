@@ -49,7 +49,7 @@
 			</div>
 			<div class="column content">
 				<h2>PARTICIPE do GT Pedala BH</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et ullamcorper nulla. Quisque mollis, purus at porttitor mollis, nunc orci euismod neque, sit amet varius dui erat bibendum nisl.</p>
+				<p>As reuniões do GT acontecem todos os meses, sempre na primeira quarta-feira do mês, das 18h às 21h (máximo), no CRJ - Centro de Referência da Juventude (Praça da Estação). Acesse <a href="https://drive.google.com/drive/folders/0B1LzhkQWFaicTkFrY3Z2emdEMEE" target="_blank">AQUI</a> as atas das últimas reuniões.</p>
 			</div>
 		</div>
 
