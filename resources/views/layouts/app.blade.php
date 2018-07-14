@@ -10,39 +10,33 @@
 
 	<title>{{ config('app.name', 'Laravel') }}</title>
 
-	<!-- Styles -->
-	<link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
 	<link rel='dns-prefetch' href='//ajax.googleapis.com' />
 	<link rel='dns-prefetch' href='//fonts.googleapis.com' />
 
+	<!-- Styles -->
+	<link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 </head>
-<body class="has-navbar-fixed-top">
-	<nav class="navbar is-fixed-top is-white">
-		<div class="container">
+<body>
+	<nav class="navbar is-white">
+		<div class="container is-fluid">
 			<div class="navbar-brand has-text-weight-bold">
-				<a class="navbar-item">
-					PlanBici-BH
-				</a>
+					<img class="logo" src="/img/logo.png"></img>
 			</div>
 
 			<div class="navbar-menu">
 				<div class="navbar-start">
+				</div>
+				<div class="navbar-end">
 					<a class="navbar-item {{ Request::is('/') ? "is-active" : "" }}" href="/">
-						<span class="icon is-medium has-text-primary">
-							<i class="fas fa-home"></i>
-						</span>
-						<span>Início</span>
+						<span class="inicio">Início</span>
 					</a>
 					<div class="navbar-item has-dropdown is-hoverable">
 						<a class="navbar-link {{ Request::is('planbici') ? "is-active" : "" }}">
-							<span class="icon is-medium has-text-danger">
-								<i class="fas fa-bicycle"></i>
-							</span>
 							O PlanBici
 						</a>
-
 						<div class="navbar-dropdown">
 							<a href="/planbici" class="navbar-item">
 								Conheça
@@ -53,15 +47,9 @@
 						</div>
 					</div>
 					<a class="navbar-item {{ Request::is('participe') ? "is-active" : "" }}" href="/participe">
-						<span class="icon is-medium has-text-warning">
-							<i class="fas fa-users"></i>
-						</span>
-						Participe e Cobre
+						<span class="participe-cobre">Participe e Cobre</span>
 					</a>
 					<a class="navbar-item {{ Request::is('contato') ? "is-active" : "" }}" href="/contato">
-						<span class="icon is-medium has-text-success">
-							<i class="fas fa-envelope"></i>
-						</span>
 						Contato
 					</a>
 				</div>

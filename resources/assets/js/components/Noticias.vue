@@ -9,15 +9,20 @@
 				</div>
 				<div class="card-content">
 					<div class="content">
-						<h4 class="title">{{ article.title }}</h4>
-						<div v-html="article.content"></div>
-						<div class="has-text-right">
+						<div class="is-size-7">
 							<time :datetime="articleDateTime(article)" class="has-text-grey">{{ articleLocalizedDate(article) }}</time>
 						</div>
+						<h4 class="title is-size-6">{{ article.title }}</h4>
+						<div class="is-size-7" v-html="article.content"></div>
 					</div>
 				</div>
 				<footer class="card-footer">
-					<a :href="article.link" target="_blank" class="card-footer-item has-text-primary has-text-weight-bold">Leia mais</a>
+					<a :href="article.link" target="_blank" class="card-footer-item has-text-dark has-text-weight-semibold">
+						<span class="icon has-text-danger">
+							<i class="fas fa-lg fa-plus-circle"></i>
+						</span>
+						Continue lendo
+					</a>
 				</footer>
 			</div>
 		</div>
@@ -44,7 +49,7 @@
         },
 		methods: {
 			articleLocalizedDate(article) {
-				return moment(article.isoDate).format('LT [-] LL');
+				return moment(article.isoDate).format('LL');
 			},
 			articleDateTime(article) {
 				return moment(article.isoDate).format('YYYY[-]M[-]D');

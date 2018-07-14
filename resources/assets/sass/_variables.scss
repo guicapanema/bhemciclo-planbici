@@ -1,15 +1,23 @@
 // 1. Import the initial variables
 @import "~bulma/sass/utilities/initial-variables";
 @import "~bulma/sass/utilities/functions";
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,600,900');
 
 // 2. Set your own initial variables
-$primary: #00C4CF;
-$warning: #E9B000;
-$danger: #E24E42;
-$success: rgb(37, 174, 106);
-$info: rgb(52, 96, 241);
+$primary: #B7E4ED;
+$warning: #FAD858;
+$danger: #A67ED2;
+$success: #A5F7C6;
+$info: #FFE7E4;
 
-$pink: #EB6E80;
+$dark: #454545;
+$grey: #C8C8C8;
+$grey-light: #F2F2F2;
 
 $family-primary: 'Raleway', sans-serif;
+
+$section-padding: 6rem 1.5rem;
+
+$card-shadow: 0;
+$card-background-color: $grey-light;
+$card-footer-border-top: 5px dashed $white;
