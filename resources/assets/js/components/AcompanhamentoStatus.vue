@@ -1,20 +1,23 @@
 <template>
 		<div>
+			<div class="columns content has-text-centered is-marginless">
+				<div class="column">
+					<h3 class="title">Como está</h3>
+				</div>
+				<div class="column">
+					<h3 class="title">Como deveria estar</h3>
+				</div>
+			</div>
 			<div class="columns">
 				<div :class="{
 					'column': true,
 					'is-half': true,
 					'is-future': selectedDate.isAfter(currentDate)
 					}">
-					<div class="content has-text-centered">
-						<h3 class="title">Como está</h3>
-					</div>
+
 					<chart :data="dataReal" class="chart"></chart>
 				</div>
 				<div class="column is-half">
-					<div class="content has-text-centered">
-						<h3 class="title">Como deveria estar</h3>
-					</div>
 					<chart :data="dataShould" class="chart"></chart>
 				</div>
 			</div>
@@ -23,7 +26,7 @@
 					<button :class="{
 								'button': true,
 								'is-danger': true,
-								'is-outlined': view !== 'actions',
+								'is-outlined': view === 'actions',
 								'is-active': view === 'actions'
 								}"
 							@click="view = 'actions'">Ações</button>
@@ -32,7 +35,7 @@
 					<button :class="{
 								'button': true,
 								'is-danger': true,
-								'is-outlined': view !== 'investments',
+								'is-outlined': view === 'investments',
 								'is-active': view === 'investments'
 								}"
 							@click="view = 'investments'">Recursos</button>

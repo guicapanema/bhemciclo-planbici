@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div class="box">
+		<div class="box has-background-success">
 			<div class="field">
 				<div class="control has-icons-left">
 					<input v-model="filterSearch" class="input" type="text" placeholder="Buscar...">
@@ -11,11 +11,11 @@
 			</div>
 			<div class="columns">
 				<div class="column">
-					<label class="label">Ano de início</label>
+					<label class="label has-text-weight-semibold">Ano de início</label>
 					<div class="control has-icons-left">
 						<span class="select">
 							<select v-model="filterYear">
-								<option :value="null">Todos os anos</option>
+								<option :value="null">Todos</option>
 								<option v-for="year of availableYears" :value="year">{{ year }}</option>
 							</select>
 						</span>
@@ -26,11 +26,11 @@
 				</div>
 
 				<div class="column">
-					<label class="label">Eixo</label>
+					<label class="label has-text-weight-semibold">Eixo</label>
 					<div class="control has-icons-left">
 						<span class="select">
 							<select v-model="filterAxis">
-								<option :value="null">Todos os eixos</option>
+								<option :value="null">Todos</option>
 								<option v-for="axis of availableAxes" :value="axis">{{ axis }}</option>
 							</select>
 						</span>
@@ -41,11 +41,11 @@
 				</div>
 
 				<div class="column">
-					<label class="label">Status</label>
+					<label class="label has-text-weight-semibold">Status</label>
 					<div class="control has-icons-left">
 						<span class="select">
 							<select v-model="filterStatus">
-								<option :value="null">Qualquer status</option>
+								<option :value="null">Todos</option>
 								<option v-for="status of availableStatuses" :value="status">{{ status }}</option>
 							</select>
 						</span>
@@ -56,11 +56,11 @@
 				</div>
 
 				<div class="column">
-					<label class="label">Atraso</label>
+					<label class="label has-text-weight-semibold">Atraso</label>
 					<div class="control has-icons-left">
 						<span class="select">
 							<select v-model="filterDelay">
-								<option :value="null">Qualquer atraso</option>
+								<option :value="null">Todos</option>
 								<option :value="false">Não atrasada</option>
 								<option :value="true">Atrasada</option>
 							</select>
@@ -78,17 +78,17 @@
 			</div>
 			<div class="columns is-multiline">
 				<div v-for="action of displayedActions(axis)" class="column is-half">
-					<div class="card">
+					<div class="card action-card">
 						<header class="card-header">
-							<p class="card-header-title">
+							<p class="card-header-title has-text-weight-semibold">
 								{{ action.name }}
 							</p>
 						</header>
-						<div :class="{'card-content': true, 'is-delayed': getDelay(action)}">
-							<div class="columns is-mobile has-text-centered">
+						<div class="card-content">
+							<div class="columns is-mobile">
 								<div class="column">
-									<div>
-										<span class="icon is-medium has-text-info">
+									<div class="has-text-danger has-text-weight-semibold">
+										<span class="icon is-medium">
 											<i class="far fa-lg fa-calendar"></i>
 										</span>
 										Data de início
@@ -105,8 +105,8 @@
 									</div>
 								</div>
 								<div class="column">
-									<div>
-										<span class="icon is-medium has-text-info">
+									<div class="has-text-danger has-text-weight-semibold">
+										<span class="icon is-medium">
 											<i class="far fa-lg fa-calendar-check"></i>
 										</span>
 										Data de término
@@ -123,45 +123,44 @@
 									</div>
 								</div>
 							</div>
-							<div class="has-text-centered">
-								<span class="icon is-medium has-text-info">
+							<div class="has-text-danger has-text-weight-semibold">
+								<span class="icon is-medium">
 									<i class="far fa-lg fa-money-bill-alt"></i>
 								</span>
 								Recursos financeiros
-								<div class="columns is-mobile">
-									<div class="column">
-										<strong><small>Valor previsto:</small></strong><br />
-										R$ {{ action.amount_forecast }}
-									</div>
-									<div class="column">
-										<strong><small>Recurso garantido:</small></strong><br />
-										R$ {{ action.amount_budgeted }}
-									</div>
-									<div class="column">
-										<strong><small>Recurso investido:</small></strong><br />
-										R$ {{ action.amount_invested }}
-									</div>
+							</div>
+							<div class="columns is-mobile">
+								<div class="column">
+									<strong><small>Valor previsto:</small></strong><br />
+									R$ {{ action.amount_forecast }}
+								</div>
+								<div class="column">
+									<strong><small>Recurso garantido:</small></strong><br />
+									R$ {{ action.amount_budgeted }}
+								</div>
+								<div class="column">
+									<strong><small>Recurso investido:</small></strong><br />
+									R$ {{ action.amount_invested }}
 								</div>
 							</div>
-							<div class="has-text-centered">
-								<span class="icon is-medium has-text-info">
+							<div class="has-text-danger has-text-weight-semibold">
+								<span class="icon is-medium">
 									<i class="fas fa-lg fa-tasks"></i>
 								</span>
 								Execução
-								<div class="columns is-mobile">
-									<div class="column">
-										<strong><small>Quantidade prevista:</small></strong><br />
-										{{ action.quantity_forecast + ' ' + action.quantity_unit }}
-									</div>
-									<div class="column">
-										<strong><small>Quantidade executada:</small></strong><br />
-										{{ action.quantity_real + ' ' + action.quantity_unit }}
-									</div>
+							</div>
+							<div class="columns is-mobile">
+								<div class="column is-one-third">
+									<strong><small>Quantidade prevista:</small></strong><br />
+									{{ action.quantity_forecast + ' ' + action.quantity_unit }}
+								</div>
+								<div class="column is-one-third">
+									<strong><small>Quantidade executada:</small></strong><br />
+									{{ action.quantity_real + ' ' + action.quantity_unit }}
 								</div>
 							</div>
-
-
 						</div>
+						<img v-if="getDelay(action)" src="/img/planbici/atrasado.png" class="delayed"></img>
 					</div>
 				</div>
 			</div>
@@ -210,25 +209,27 @@
 		methods: {
 			displayedActions(axis) {
 				return axis.actions.filter(action => {
-					let matchYear = true;
+					let matchDelay = true;
 					let matchStatus = true;
 					let matchSearch = true;
+					let matchYear = true;
 
+					if (this.filterDelay !== null) {
+						matchDelay = this.filterDelay === this.getDelay(action);
+					}
+					if (this.filterSearch.length) {
+						matchSearch = JSON.stringify(action).toLowerCase().indexOf(this.filterSearch.trim().toLowerCase()) >= 0;
+					}
+					if (this.filterStatus) {
+						matchStatus = this.filterStatus === this.getStatus(action);
+					}
 					if (this.filterYear) {
 						let startDate = moment(action.start_date_forecast);
 						let endDate = moment(action.end_date_forecast);
 						matchYear = (startDate.year() <= this.filterYear) && (this.filterYear <= endDate.year());
 					}
 
-					if (this.filterStatus) {
-						matchStatus = this.filterStatus === this.getStatus(action);
-					}
-
-					if (this.filterSearch.length) {
-						matchSearch = JSON.stringify(action).toLowerCase().indexOf(this.filterSearch.trim().toLowerCase()) >= 0;
-					}
-
-					return matchYear && matchStatus && matchSearch
+					return matchDelay && matchSearch && matchStatus && matchYear;
 				});
 			},
 			getStatus(action) {

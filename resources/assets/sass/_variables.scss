@@ -16,10 +16,24 @@ $grey-light: #F2F2F2;
 
 $family-primary: 'Raleway', sans-serif;
 
+$gap: 128px;
+
 $section-padding: 6rem 1.5rem;
 
 $card-shadow: 0;
+$card-header-shadow: 0;
 $card-background-color: $grey-light;
 $card-footer-border-top: 5px dashed $white;
 
-$gap: 128px;
+$button-border-width: 5px;
+
+$slider-thumb-background: $success;
+$slider-thumb-border: none;
+
+$box-shadow: none;
+
+$input-shadow: none;
+
+$input-border-color: $white;
+$input-hover-border-color: $white;
+$input-focus-color: $white;

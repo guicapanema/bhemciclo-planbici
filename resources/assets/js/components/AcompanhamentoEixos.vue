@@ -2,10 +2,11 @@
 	<div>
 		<div class="columns is-multiline">
 			<div v-for="axis of axes" class="column is-half">
-				<div class="card">
+				<div class="card axis-card">
 					<header class="card-header">
 						<p class="card-header-title">
-							{{ axis.name }}
+							<img class="axis-icon" :src="'/img/planbici/' + axis.alias + '.png'"></img>
+							<span class="has-text-weight-semibold is-uppercase">{{ axis.name }}</span>
 						</p>
 					</header>
 					<div class="card-content">

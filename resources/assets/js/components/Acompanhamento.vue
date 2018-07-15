@@ -3,15 +3,22 @@
 		<a name="acompanhe"></a>
 		<div class="container">
 			<div class="content">
-				<h1 class="has-text-centered">Acompanhe o plano</h1>
+				<h1 class="has-text-centered is-size-1">
+					<span class="is-underlined-dashed-dark">
+						Acompanhe o plano
+					</span>
+				</h1>
 			</div>
 		</div>
-		<div class="field is-grouped is-grouped-centered">
+		<div class="field is-grouped is-grouped-centered has-margin-top-500">
 			<div class="control">
 				<button :class="{
 							'button': true,
-							'is-danger': true,
-							'is-outlined': view !== 'overview',
+							'is-large': true,
+							'is-success': true,
+							'has-text-dark': true,
+							'has-text-weight-semibold': true,
+							'is-outlined': view === 'overview',
 							'is-active': view === 'overview'
 							}"
 						@click="onChangeView('overview')">Geral</button>
@@ -19,8 +26,11 @@
 			<div class="control">
 				<button :class="{
 							'button': true,
-							'is-danger': true,
-							'is-outlined': view !== 'axes',
+							'is-large': true,
+							'is-success': true,
+							'has-text-dark': true,
+							'has-text-weight-semibold': true,
+							'is-outlined': view === 'axes',
 							'is-active': view === 'axes'
 							}"
 						@click="onChangeView('axes')">Eixos</button>
@@ -28,20 +38,26 @@
 			<div class="control">
 				<button :class="{
 							'button': true,
-							'is-danger': true,
-							'is-outlined': view !== 'actions',
+							'is-large': true,
+							'is-success': true,
+							'has-text-dark': true,
+							'has-text-weight-semibold': true,
+							'is-outlined': view === 'actions',
 							'is-active': view === 'actions'
 							}"
 						@click="onChangeView('actions')">Ações</button>
 			</div>
 		</div>
 
-		<div v-if="view !== 'actions'" class="columns is-vcentered is-mobile">
-			<div class="column is-one-fifth has-text-right">2017</div>
-			<div class="column">
+		<div v-if="view !== 'actions'" class="columns is-centered is-mobile">
+			<div class="column is-10">
+				<div class="is-size-5 has-text-weight-semibold">
+					<div class="is-pulled-left">2017</div>
+					<div class="is-pulled-right">2020</div>
+					<div class="is-clearfix"></div>
+				</div>
 				<input class="slider is-fullwidth is-danger" step="3" min="0" max="39" v-model.number="selectedMonth" @change="onChangeSelectedMonth()" type="range">
 			</div>
-			<div class="column is-one-fifth">2020</div>
 		</div>
 		<div v-if="view !== 'actions'" class="content has-text-centered">
 			<h3 class="is-inline-flex">
@@ -55,7 +71,7 @@
 			</h3>
 		</div>
 
-		<div v-if="view === 'overview'" class="box">
+		<div v-if="view === 'overview'">
 			<acompanhamento-status
 				:actions="actions"
 				:selectedDate="selectedDate">

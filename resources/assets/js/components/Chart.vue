@@ -23,7 +23,7 @@
 
 			parseInputData() {
 				this.dataCollection.datasets = [{
-					backgroundColor: ['whitesmoke', '#df392c', '#E9B000'],
+					backgroundColor: ['whitesmoke', '#A5F7C6', '#A67ED2'],
 					data: this.data
 				}];
 				this.renderChart(this.dataCollection, {responsive: true, maintainAspectRatio: true});
