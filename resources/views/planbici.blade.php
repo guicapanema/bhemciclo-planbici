@@ -29,37 +29,37 @@
 			As ações previstas foram agrupadas e 6 eixos:
 		</h3>
 		<div class="columns is-mobile is-multiline">
-			<div class="column is-2 is-4-mobile has-text-centered">
+			<div class="column is-6-mobile is-4-tablet is-2-desktop has-text-centered">
 				<img src="/img/planbici/infraestrutura.png"></img>
 				<div class="is-uppercase has-text-weight-semibold is-size-7">
 					Infraestrutura e circulação
 				</div>
 			</div>
-			<div class="column is-2 is-4-mobile has-text-centered">
+			<div class="column is-6-mobile is-4-tablet is-2-desktop has-text-centered">
 				<img src="/img/planbici/integracao.png"></img>
 				<div class="is-uppercase has-text-weight-semibold is-size-7">
 					Integração modal e bicicletas compartilhadas
 				</div>
 			</div>
-			<div class="column is-2 is-4-mobile has-text-centered">
+			<div class="column is-6-mobile is-4-tablet is-2-desktop has-text-centered">
 				<img src="/img/planbici/comunicacao.png"></img>
 				<div class="is-uppercase has-text-weight-semibold is-size-7">
 					Comunicação, educação e mobilização
 				</div>
 			</div>
-			<div class="column is-2 is-4-mobile has-text-centered">
+			<div class="column is-6-mobile is-4-tablet is-2-desktop has-text-centered">
 				<img src="/img/planbici/governanca.png"></img>
 				<div class="is-uppercase has-text-weight-semibold is-size-7">
 					Governança, produção de dados e transparência
 				</div>
 			</div>
-			<div class="column is-2 is-4-mobile has-text-centered">
+			<div class="column is-6-mobile is-4-tablet is-2-desktop has-text-centered">
 				<img src="/img/planbici/legislacao.png"></img>
 				<div class="is-uppercase has-text-weight-semibold is-size-7">
 					Legislação
 				</div>
 			</div>
-			<div class="column is-2 is-4-mobile has-text-centered">
+			<div class="column is-6-mobile is-4-tablet is-2-desktop has-text-centered">
 				<img src="/img/planbici/financiamento.png"></img>
 				<div class="is-uppercase has-text-weight-semibold is-size-7">
 					Financiamento
