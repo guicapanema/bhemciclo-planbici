@@ -213,12 +213,13 @@ img.logo {
 .home-hero {
 	background: url('/img/home/home-hero.jpg');
 	background-size: cover;
+	background-position: right;
 }
 
 .hero.home-hero > .hero-body {
 	@media (min-width: 769px) {
-		padding-top: 16rem;
-		padding-bottom: 2rem;
+		padding-top: 15rem;
+		padding-bottom: 3rem;
 	}
 
 	& .subtitle-box {
@@ -227,6 +228,10 @@ img.logo {
 		padding: 0.5rem 1rem;
 		position: relative;
 		left: -1rem;
+
+		@media (max-width: 768px) {
+			max-width: 80%;
+		}
 	}
 }
 
@@ -255,7 +260,6 @@ img.logo {
 
 }
 
-
 .title .apoie {
 	position: relative;
 	z-index: 1;
@@ -270,6 +274,25 @@ img.logo {
 		bottom: -2px;
 		left: -2.5%;
 		z-index: -1;
+	}
+}
+
+h1.home-noticias-title {
+	margin-bottom: 6rem;
+
+	& span.text-container {
+		position: relative;
+
+		& img {
+			position: absolute;
+			left: -50%;
+			top: -120%;
+			width: 180%;
+			height: auto;
+			max-width: none;
+			max-height: none;
+			z-index: -1;
+		}
 	}
 }
 

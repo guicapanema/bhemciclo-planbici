@@ -94,7 +94,12 @@
 		<div class="container content">
 			<div class="columns">
 				<div class="column">
-					<h1 class="has-text-centered">N<span class="is-underlined-warning">otícias</span></h1>
+					<h1 class="has-text-centered is-size-1 home-noticias-title">
+						<span class="text-container">
+							<img src="/img/home/noticias.png"></img>
+							N<span class="is-underlined-warning">otícias</span>
+						</span>
+					</h1>
 				</div>
 			</div>
 			<noticias></noticias>

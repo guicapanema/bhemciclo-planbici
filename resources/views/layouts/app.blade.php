@@ -69,7 +69,7 @@
 					<h5 class="is-marginless">#euqueroplanbici</h5>
 				</div>
 			</div>
-			<div class="columns is-centered">
+			<div class="columns is-centered ">
 				<div class="column is-narrow">
 					<figure class="image is-48x48">
 						<a href="https://www.facebook.com/dialog/share?app_id=390669861344505&display=popup&href=https://planbicibh.org&redirect_uri=https://planbicibh.org" target="_blank">
