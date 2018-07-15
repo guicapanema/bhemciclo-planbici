@@ -101,7 +101,7 @@ img.logo {
 	height: auto;
 	margin: 1rem 0;
 }
-.navbar-menu .navbar-item {
+.navbar-menu .navbar-item, .navbar-menu .navbar-link {
 
 	&:hover, &.is-active, & .navbar-link {
 		background-color: transparent !important;
