@@ -74,7 +74,10 @@
 		</div>
 		<div v-for="axis of displayedAxes">
 			<div class="content">
-				<h4>{{ axis.name }}</h4>
+				<h4 class="axis-divider has-text-weight-semibold is-uppercase">
+					<img class="axis-icon" :src="'/img/planbici/' + axis.alias + '.png'"></img>
+					{{ axis.name }}
+				</h4>
 			</div>
 			<div class="columns is-multiline">
 				<div v-for="action of displayedActions(axis)" class="column is-half">

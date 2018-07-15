@@ -331,6 +331,20 @@ h1.home-noticias-title {
 	}
 }
 
+.axis-divider {
+	display: flex;
+	align-items: center;
+	border-bottom: 5px solid $grey;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	margin-top: 2rem;
+
+	& img {
+		max-width: 4rem;
+		margin-right: 1.5rem;
+	}
+}
+
 .card.action-card {
 	position: relative;
 
