@@ -34,8 +34,11 @@
 						<span class="inicio">Início</span>
 					</a>
 					<div class="navbar-item has-dropdown is-hoverable">
-						<a class="navbar-link {{ Request::is('planbici') ? "is-active" : "" }}">
-							O PlanBici
+						<a class="navbar-link {{ Request::is('planbici') ? "is-active" : "" }}" href="/planbici">
+							<span class="o-planbici">
+								<img src="/img/o-planbici.png"></img>
+								O PlanBici
+							</span>
 						</a>
 						<div class="navbar-dropdown">
 							<a href="/planbici" class="navbar-item">
@@ -50,7 +53,7 @@
 						<span class="participe-cobre">Participe e Cobre</span>
 					</a>
 					<a class="navbar-item {{ Request::is('contato') ? "is-active" : "" }}" href="/contato">
-						Contato
+						<span class="contato">Contato</span>
 					</a>
 				</div>
 			</div>
