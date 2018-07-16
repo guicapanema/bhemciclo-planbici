@@ -23,6 +23,7 @@
     },
     "dependencies": {
         "chart.js": "^2.7.2",
+        "dayjs": "^1.7.4",
         "rss-parser": "^3.4.2",
         "vue-chartjs": "^3.3.2"
     }

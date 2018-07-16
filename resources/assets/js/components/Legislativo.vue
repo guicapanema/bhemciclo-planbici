@@ -6,8 +6,8 @@
 					<img :src="councilor.image">
 					<div :class="{
 							'councilor-overlay': true,
-						 	'has-background-success': councilor.supports.length > 0,
-							'has-background-danger': councilor.supports.length === 0
+						 	'has-background-green': councilor.supports.length > 0,
+							'has-background-red': councilor.supports.length === 0
 							}">
 					</div>
 					<div class="councilor-overlay-hover">

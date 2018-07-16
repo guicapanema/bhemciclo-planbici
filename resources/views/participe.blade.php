@@ -118,132 +118,163 @@
 				<div class="column is-half">
 					<div class="columns is-multiline is-mobile">
 						<div class="column is-half">
-							<div class="card">
+							<div class="card has-background-info">
 								<div class="card-content">
-									<p class="subtitle">
-										#euqueroPlanBici para Belo Horizonte ter uma mobilidade urbana de baixas emissões! www.d1passo.org
+									<p>
+										<span class="has-text-weight-semibold">#euqueroPlanBici</span> para Belo Horizonte ter uma mobilidade urbana de baixas emissões! www.d1passo.org
 									</p>
 								</div>
 								<footer class="card-footer">
-									<p class="card-footer-item">
+									<div class="card-footer-item social-share has-text-weight-semibold">
 										Poste no
-										<span class="icon">
-											<i class="fab fa-lg fa-facebook"></i>
-										</span>
-										<span class="icon">
-											<i class="fab fa-lg fa-twitter"></i>
-										</span>
-									</p>
+										<div>
+											<a href="https://twitter.com/codinghorror/status/506010907021828096" target="_blank" class="has-text-dark">
+												<span class="icon is-medium">
+													<i class="fab fa-lg fa-facebook"></i>
+												</span>
+											</a>
+											<a href="https://twitter.com/codinghorror/status/506010907021828096" target="_blank" class="has-text-dark">
+												<span class="icon is-medium">
+													<i class="fab fa-lg fa-twitter"></i>
+												</span>
+											</a>
+										</div>
+									</div>
 								</footer>
 							</div>
 						</div>
 
 						<div class="column is-half">
-							<div class="card">
+							<div class="card has-background-info">
 								<div class="card-content">
-									<p class="subtitle">
-										Você pode colaborar com a mobilidade urbana de Belo Horizonte! Diga #euqueroPlanBici!
+									<p>
+										Você pode colaborar com a mobilidade urbana de Belo Horizonte! Diga <span class="has-text-weight-semibold">#euqueroPlanBici</span>!
 									</p>
 								</div>
 								<footer class="card-footer">
-									<p class="card-footer-item">
-										<span>
-											Postar no <a href="https://twitter.com/codinghorror/status/506010907021828096">Twitter</a>
-										</span>
-									</p>
-									<p class="card-footer-item">
-										<span>
-											Postar no <a href="#">Facebook</a>
-										</span>
-									</p>
+									<div class="card-footer-item social-share has-text-weight-semibold">
+										Poste no
+										<div>
+											<a href="https://twitter.com/codinghorror/status/506010907021828096" target="_blank" class="has-text-dark">
+												<span class="icon is-medium">
+													<i class="fab fa-lg fa-facebook"></i>
+												</span>
+											</a>
+											<a href="https://twitter.com/codinghorror/status/506010907021828096" target="_blank" class="has-text-dark">
+												<span class="icon is-medium">
+													<i class="fab fa-lg fa-twitter"></i>
+												</span>
+											</a>
+										</div>
+									</div>
 								</footer>
 							</div>
 						</div>
 
 						<div class="column is-half">
-							<div class="card">
+							<div class="card has-background-info">
 								<div class="card-content">
-									<p class="subtitle">
-										BH merece dar um passo adiante e você pode ajudar a cidade nisso! Como? Apoiando o #PlanBici
+									<p>
+										BH merece dar um passo adiante e você pode ajudar a cidade nisso! Como? Apoiando o <span class="has-text-weight-semibold">#PlanBici</span>
 									</p>
 								</div>
 								<footer class="card-footer">
-									<p class="card-footer-item">
-										<span>
-											Postar no <a href="https://twitter.com/codinghorror/status/506010907021828096">Twitter</a>
-										</span>
-									</p>
-									<p class="card-footer-item">
-										<span>
-											Postar no <a href="#">Facebook</a>
-										</span>
-									</p>
+									<div class="card-footer-item social-share has-text-weight-semibold">
+										Poste no
+										<div>
+											<a href="https://twitter.com/codinghorror/status/506010907021828096" target="_blank" class="has-text-dark">
+												<span class="icon is-medium">
+													<i class="fab fa-lg fa-facebook"></i>
+												</span>
+											</a>
+											<a href="https://twitter.com/codinghorror/status/506010907021828096" target="_blank" class="has-text-dark">
+												<span class="icon is-medium">
+													<i class="fab fa-lg fa-twitter"></i>
+												</span>
+											</a>
+										</div>
+									</div>
 								</footer>
 							</div>
 						</div>
 
 						<div class="column is-half">
-							<div class="card">
+							<div class="card has-background-info">
 								<div class="card-content">
-									<p class="subtitle">
-										Quer melhorias na mobilidade urbana de BH? Então você quer #PlanBici!
+									<p>
+										Quer melhorias na mobilidade urbana de BH? Então você quer <span class="has-text-weight-semibold">#PlanBici</span>!
 									</p>
 								</div>
 								<footer class="card-footer">
-									<p class="card-footer-item">
-										<span>
-											Postar no <a href="https://twitter.com/codinghorror/status/506010907021828096">Twitter</a>
-										</span>
-									</p>
-									<p class="card-footer-item">
-										<span>
-											Postar no <a href="#">Facebook</a>
-										</span>
-									</p>
+									<div class="card-footer-item social-share has-text-weight-semibold">
+										Poste no
+										<div>
+											<a href="https://twitter.com/codinghorror/status/506010907021828096" target="_blank" class="has-text-dark">
+												<span class="icon is-medium">
+													<i class="fab fa-lg fa-facebook"></i>
+												</span>
+											</a>
+											<a href="https://twitter.com/codinghorror/status/506010907021828096" target="_blank" class="has-text-dark">
+												<span class="icon is-medium">
+													<i class="fab fa-lg fa-twitter"></i>
+												</span>
+											</a>
+										</div>
+									</div>
 								</footer>
 							</div>
 						</div>
 
 						<div class="column is-half">
-							<div class="card">
+							<div class="card has-background-info">
 								<div class="card-content">
-									<p class="subtitle">
-										BH tem a 2ª maior frota de veículos do Brasil. Como mudar a realidade do trânsito? Com #PlanBici
+									<p>
+										BH tem a 2ª maior frota de veículos do Brasil. Como mudar a realidade do trânsito? Com <span class="has-text-weight-semibold">#PlanBici</span>
 									</p>
 								</div>
 								<footer class="card-footer">
-									<p class="card-footer-item">
-										<span>
-											Postar no <a href="https://twitter.com/codinghorror/status/506010907021828096">Twitter</a>
-										</span>
-									</p>
-									<p class="card-footer-item">
-										<span>
-											Postar no <a href="#">Facebook</a>
-										</span>
-									</p>
+									<div class="card-footer-item social-share has-text-weight-semibold">
+										Poste no
+										<div>
+											<a href="https://twitter.com/codinghorror/status/506010907021828096" target="_blank" class="has-text-dark">
+												<span class="icon is-medium">
+													<i class="fab fa-lg fa-facebook"></i>
+												</span>
+											</a>
+											<a href="https://twitter.com/codinghorror/status/506010907021828096" target="_blank" class="has-text-dark">
+												<span class="icon is-medium">
+													<i class="fab fa-lg fa-twitter"></i>
+												</span>
+											</a>
+										</div>
+									</div>
 								</footer>
 							</div>
 						</div>
 
 						<div class="column is-half">
-							<div class="card">
+							<div class="card has-background-info">
 								<div class="card-content">
-									<p class="subtitle">
-										A frota de veículos de BH aumentou 100% de 2005 a 2015! Quer melhorar a mobilidade urbana da cidade? #D1Passo www.d1passo.org
+									<p>
+										A frota de veículos de BH aumentou 100% de 2005 a 2015! Quer melhorar a mobilidade urbana da cidade? <span class="has-text-weight-semibold">#D1Passo</span> www.d1passo.org
 									</p>
 								</div>
 								<footer class="card-footer">
-									<p class="card-footer-item">
-										<span>
-											Postar no <a href="https://twitter.com/codinghorror/status/506010907021828096">Twitter</a>
-										</span>
-									</p>
-									<p class="card-footer-item">
-										<span>
-											Postar no <a href="#">Facebook</a>
-										</span>
-									</p>
+									<div class="card-footer-item social-share has-text-weight-semibold">
+										Poste no
+										<div>
+											<a href="https://twitter.com/codinghorror/status/506010907021828096" target="_blank" class="has-text-dark">
+												<span class="icon is-medium">
+													<i class="fab fa-lg fa-facebook"></i>
+												</span>
+											</a>
+											<a href="https://twitter.com/codinghorror/status/506010907021828096" target="_blank" class="has-text-dark">
+												<span class="icon is-medium">
+													<i class="fab fa-lg fa-twitter"></i>
+												</span>
+											</a>
+										</div>
+									</div>
 								</footer>
 							</div>
 						</div>
