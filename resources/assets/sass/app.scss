@@ -343,7 +343,8 @@ img.logo {
 }
 
 h1.home-noticias-title {
-	margin-bottom: 6rem;
+	margin-top: 2rem;
+	margin-bottom: 8rem;
 
 	& span.text-container {
 		position: relative;
@@ -464,6 +465,7 @@ h1.home-noticias-title {
 
 .column.acompanhe {
 	position: relative;
+	padding: 2rem;
 
 	&::before {
 		content: "";
@@ -492,6 +494,7 @@ h1.home-noticias-title {
 
 .column.apoie {
 	position: relative;
+	padding: 2rem;
 
 	&::before {
 		content: "";
@@ -538,34 +541,38 @@ h1.home-noticias-title {
 
 .column.engaje {
 	border: none;
-	// transition: all .5s ease-in-out;
+	padding: 2rem;
 
 	&:hover {
 		@media (min-width: 769px) {
 			border: 5px dashed $danger;
 			border-radius: 10px;
-			padding: calc(0.75rem - 5px);
+			padding: calc(2rem - 5px);
 		}
 	}
 }
 
 .column.participe {
 	position: relative;
+	padding: 2rem;
 
-	& .icon {
+	& img {
 		position: absolute;
 		top: 50%;
-		right: -2%;
+		right: 0;
+		width: 12%;
 		z-index: -1;
 		opacity: 0;
+		transform: rotate(17deg);
+		transform-origin: center;
 		transition: opacity .3s cubic-bezier(.7,0,.3,1), transform .3s .3s cubic-bezier(.7,0,.3,1);
 	}
 
 	&:hover {
 		@media (min-width: 769px) {
-			& .icon {
+			& img {
 				opacity: 1;
-				transform: rotate(-15deg);
+				transform: rotate(0deg);
 			}
 		}
 	}
@@ -573,6 +580,7 @@ h1.home-noticias-title {
 
 .column.email {
 	position: relative;
+	padding: 2rem;
 
 	&::before {
 		content: "";
@@ -598,6 +606,7 @@ h1.home-noticias-title {
 
 .column.receba {
 	position: relative;
+	padding: 2rem;
 
 	& img.receba-bg {
 		position: absolute;
