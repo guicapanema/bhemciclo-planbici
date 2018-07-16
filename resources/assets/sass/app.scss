@@ -419,8 +419,8 @@ h1.home-noticias-title {
 
 	&::before {
 		content: "";
-		width: 45%;
-		padding-top: 45%;
+		width: 180px;
+		padding-top: 180px;
 		border-radius: 100%;
 		background-color: $info;
 		position: absolute;
@@ -473,8 +473,8 @@ h1.home-noticias-title {
 	&:hover {
 		@media (min-width: 769px) {
 			&::before {
-				width: 40%;
-				padding-top: 40%;
+				width: 195px;
+				padding-top: 195px;
 				top: -20%;
 				left: -10%;
 			}
