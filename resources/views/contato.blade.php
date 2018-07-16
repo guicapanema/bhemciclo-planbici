@@ -1,42 +1,42 @@
 @extends('layouts.app')
 
 @section('content')
-<section class="section">
+<section class="section has-background-primary">
 	<div class="container">
-		<div class="columns is-vcentered">
-			<div class="column is-one-third content">
-				<h2>Entre em contato</h2>
-				<p>Qualquer dúvida, envie e-mail para bhemciclo@gmail.com ou preencha o formulário:</p>
+
+		<div class="columns is-centered is-vcentered">
+			<div class="column is-4 content contato-title-container">
+				<div class="contato-circle-1"></div>
+				<div class="contato-bar"></div>
+				<h1 class="entre-contato">Entre em <span class="has-text-weight-bold is-underlined-dashed-white">Contato</span></h1>
+				<p class="has-text-weight-semibold has-margin-top-500">Qualquer dúvida, envie um email para bhemciclo@gmail.com ou preencha o formulário:</p>
 			</div>
-			<form class="column is-two-thirds" method="POST" action="/contato">
+			<form class="column is-4 is-offset-2 contato-form-container" method="POST" action="/contato">
+
+				<div class="contato-circle-2"></div>
+
 				{{ csrf_field() }}
 				<div class="field">
-					<label class="label">Nome</label>
-					<div class="control has-icons-left">
-						<input class="input{{ $errors->has('nome') ? ' is-danger' : '' }}" type="text" id="nome" name="nome" placeholder="Digite seu nome">
-						<span class="icon is-small is-left">
-							<i class="fas fa-user"></i>
-						</span>
+					<label class="label has-text-weight-semibold">Nome</label>
+					<div class="control">
+						<input class="input{{ $errors->has('nome') ? ' is-danger' : '' }}" type="text" id="nome" name="nome">
 					</div>
 					@if ($errors->has('nome'))<p class="help is-danger">Por favor, digite seu nome</p>@endif
 				</div>
 
 				<div class="field">
-					<label class="label">Email</label>
-					<div class="control has-icons-left">
-						<input class="input{{ $errors->has('email') ? ' is-danger' : '' }}" type="email" id="email" name="email" placeholder="Digite seu email">
-						<span class="icon is-small is-left">
-							<i class="fas fa-envelope"></i>
-						</span>
+					<label class="label has-text-weight-semibold">Email</label>
+					<div class="control">
+						<input class="input{{ $errors->has('email') ? ' is-danger' : '' }}" type="email" id="email" name="email">
 					</div>
 					@if ($errors->has('email'))<p class="help is-danger">Por favor, digite um e-mail válido</p>@endif
 
 				</div>
 
 				<div class="field">
-					<label class="label">Mensagem</label>
+					<label class="label has-text-weight-semibold">Mensagem</label>
 					<div class="control">
-						<textarea class="textarea{{ session('success') ? ' is-success' : '' }}{{ $errors->has('mensagem') ? ' is-danger' : '' }}" id="mensagem" name="mensagem" placeholder="Digite sua mensagem"></textarea>
+						<textarea class="textarea{{ session('success') ? ' is-success' : '' }}{{ $errors->has('mensagem') ? ' is-danger' : '' }}" id="mensagem" name="mensagem"></textarea>
 					</div>
 					@if (session('success'))<p class="help is-success">Mensagem enviada com sucesso!</p>@endif
 					@if ($errors->has('mensagem'))<p class="help is-danger">Por favor, digite uma mensagem</p>@endif
@@ -44,11 +44,14 @@
 
 				<div class="field is-pulled-right">
 					<div class="control">
-						<button type="submit" class="button is-success">Enviar</button>
+						<button type="submit" class="button is-danger has-text-weight-semibold">Enviar</button>
 					</div>
 				</div>
 			</form>
 		</div>
 	</div>
 </section>
+
+<div class="divider is-dark"></div>
+
 @endsection

@@ -695,3 +695,51 @@ h1.faca-barulho {
 	align-items: center;
 	justify-content: space-between;
 }
+
+/* Página Contato */
+
+.contato-title-container {
+	position: relative;
+	z-index: 1;
+
+	& h1.entre-contato {
+		font-size: 5em;
+	}
+
+	& .contato-circle-1 {
+		width: 40%;
+		padding-top: 40%;
+		border-radius: 100%;
+		background-color: $info;
+		position: absolute;
+		top: 50%;
+		left: -10%;
+		z-index: -1;
+	}
+
+	& .contato-bar {
+		width: 50%;
+		height: 20px;
+		background-color: $success;
+		position: absolute;
+		bottom: -5%;
+		left: 0;
+		z-index: -1;
+	}
+}
+
+.contato-form-container {
+	position: relative;
+	z-index: 1;
+
+	& .contato-circle-2 {
+		width: 70%;
+		padding-top: 70%;
+		border-radius: 100%;
+		background-color: $warning;
+		position: absolute;
+		top: 0;
+		right: -25%;
+		z-index: -1;
+	}
+}
