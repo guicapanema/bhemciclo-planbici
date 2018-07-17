@@ -25,9 +25,9 @@ class CouncilorController extends Controller
     public function list(Request $request)
     {
 		if ($request->query('showSupports') == 'true') {
-			return Councilor::with(['supports'])->get();
+			return Councilor::with(['supports'])->orderBy('name')->get();
 		} else {
-			return Councilor::all();
+			return Councilor::orderBy('name')->all();
 		}
     }
 

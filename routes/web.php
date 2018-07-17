@@ -35,3 +35,5 @@ Route::get('/api/acoes', 'ActionController@list');
 Route::get('/api/vereadores', 'CouncilorController@list');
 
 Route::get('/api/news', 'NewsController@list');
+
+Route::post('/contato', 'ContactController@contact');
