@@ -22,6 +22,7 @@
         "vue": "^2.5.7"
     },
     "dependencies": {
+        "aos": "^2.3.3",
         "chart.js": "^2.7.2",
         "dayjs": "^1.7.4",
         "rss-parser": "^3.4.2",

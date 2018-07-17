@@ -1,7 +1,7 @@
 <template>
 	<div class="columns">
-		<div v-for="article of news" class="column">
-			<div class="card">
+		<div v-for="(article, index) of news" class="column">
+			<div class="card" :data-aos="getDataAos(index)">
 				<div v-if="articleImage(article['content:encoded'])" class="card-image">
 					<figure class="image is-marginless">
 						<img :src="articleImage(article['content:encoded'])" alt="Imagem do post">
@@ -59,6 +59,15 @@
 				div.innerHTML = content;
 				let firstImage = div.getElementsByTagName('img')[0]
 				return firstImage ? firstImage.getAttribute("src") : null;
+			},
+			getDataAos(index) {
+				if (index === 0) {
+					return 'fade-right';
+				} else if (index === 1) {
+					return 'fade-up';
+				} else if (index === 2) {
+					return 'fade-left';
+				}
 			}
 		}
     }

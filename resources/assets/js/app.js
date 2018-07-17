@@ -30,7 +30,6 @@ const app = new Vue({
     el: '#app'
 });
 
-
 document.addEventListener('DOMContentLoaded', () => {
 
   // Get all "navbar-burger" elements
@@ -55,4 +54,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+});
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init({
+	delay: 200,
+	once: true,
 });

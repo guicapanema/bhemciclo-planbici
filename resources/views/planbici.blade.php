@@ -6,7 +6,7 @@
 
 
 <section class="section has-background-grey-light">
-	<div class="container content">
+	<div class="container content" data-aos="fade-up">
 		<h1 class="title has-text-centered is-size-1">
 			<span class="is-underlined-dashed-warning">
 				Conheça o PlanBici BH

@@ -2,7 +2,7 @@
 
 @section('content')
 	<section class="section has-background-warning">
-		<div class="container content has-text-centered">
+		<div class="container content has-text-centered" data-aos="fade-up">
 			<h1 class="title is-size-1 is-double-spaced">
 				<span class="participe-title">
 					Pa<span class="is-underlined-success">rticipe</span> e Cobre
@@ -17,22 +17,22 @@
 	<section class="section">
 		<div class="container">
 			<div class="columns">
-				<div class="column content acompanhe">
+				<div class="column content acompanhe" data-aos="fade-right">
 					<h2 class="title is-double-spaced"><span class="is-underlined-warning">Acompanhe</span> as ações da BH em Ciclo</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et ullamcorper nulla. Quisque mollis, purus at porttitor mollis, nunc orci euismod neque, sit amet varius dui erat bibendum nisl.</p>
 				</div>
-				<div class="column content apoie">
+				<div class="column content apoie" data-aos="fade-left">
 					<h2 class="title is-double-spaced">Faça um <span class="is-underlined-success">vídeo pessoal</span> de apoio ao PlanBici</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et ullamcorper nulla. Quisque mollis, purus at porttitor mollis, nunc orci euismod neque, sit amet varius dui erat bibendum nisl.</p>
 				</div>
 			</div>
 
 			<div class="columns">
-				<div class="column content engaje">
+				<div class="column content engaje" data-aos="fade-right">
 					<h2 class="title is-double-spaced"><span class="is-underlined-primary">Engaje</span> seus amigos e familiares</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et ullamcorper nulla. Quisque mollis, purus at porttitor mollis, nunc orci euismod neque, sit amet varius dui erat bibendum nisl.</p>
 				</div>
-				<div class="column content participe">
+				<div class="column content participe" data-aos="fade-left">
 					<h2 class="title is-double-spaced"><span class="is-underlined-danger">Participe</span> do GT Pedala BH</h2>
 					<p>As reuniões do GT acontecem todos os meses, sempre na primeira quarta-feira do mês, das 18h às 21h (máximo), no CRJ - Centro de Referência da Juventude (Praça da Estação). Acesse <a href="https://drive.google.com/drive/folders/0B1LzhkQWFaicTkFrY3Z2emdEMEE" target="_blank" class="has-text-weight-semibold">AQUI</a> as atas das últimas reuniões.</p>
 					<img src="/img/participe/participe.png"></img>
@@ -40,11 +40,11 @@
 			</div>
 
 			<div class="columns">
-				<div class="column content email">
+				<div class="column content email" data-aos="fade-right">
 					<h2 class="title is-double-spaced">Envie um email para o <span class="is-underlined-info">seu vereador</span></h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et ullamcorper nulla. Quisque mollis, purus at porttitor mollis, nunc orci euismod neque, sit amet varius dui erat bibendum nisl.</p>
 				</div>
-				<form class="column content receba" method="POST" action="https://bhemciclo.us3.list-manage.com/subscribe/post">
+				<form class="column content receba" method="POST" action="https://bhemciclo.us3.list-manage.com/subscribe/post" data-aos="fade-left">
 					<h2 class="title is-double-spaced">
 						<span class="receba-noticias">Receba notícias</span> sobre o PlanBici
 					</h2>
@@ -80,7 +80,7 @@
 	<div class="divider is-success"></div>
 
 	<section class="section has-background-grey-light">
-		<div class="container has-text-centered">
+		<div class="container has-text-centered" data-aos="fade-up">
 			<div class="columns is-centered">
 				<div class="column is-8 content">
 					<h1 class="is-size-1">
@@ -101,7 +101,7 @@
 	<section class="section has-background-success">
 		<div class="container content">
 			<div class="columns">
-				<div class="column is-half">
+				<div class="column is-half" data-aos="fade-right">
 					<h1 class="faca-barulho">
 						Faça<br />
 						<span class="barulho is-uppercase has-text-white">
@@ -116,7 +116,7 @@
 
 				<div class="column is-half">
 					<div class="columns is-multiline is-mobile">
-						<div class="column is-half">
+						<div class="column is-12-mobile is-half-tablet" data-aos="flip-left">
 							<div class="card has-background-info">
 								<div class="card-content">
 									<p>
@@ -143,7 +143,7 @@
 							</div>
 						</div>
 
-						<div class="column is-half">
+						<div class="column is-12-mobile is-half-tablet" data-aos="flip-right">
 							<div class="card has-background-info">
 								<div class="card-content">
 									<p>
@@ -170,7 +170,7 @@
 							</div>
 						</div>
 
-						<div class="column is-half">
+						<div class="column is-12-mobile is-half-tablet" data-aos="flip-left">
 							<div class="card has-background-info">
 								<div class="card-content">
 									<p>
@@ -197,7 +197,7 @@
 							</div>
 						</div>
 
-						<div class="column is-half">
+						<div class="column is-12-mobile is-half-tablet" data-aos="flip-right">
 							<div class="card has-background-info">
 								<div class="card-content">
 									<p>
@@ -224,7 +224,7 @@
 							</div>
 						</div>
 
-						<div class="column is-half">
+						<div class="column is-12-mobile is-half-tablet" data-aos="flip-left">
 							<div class="card has-background-info">
 								<div class="card-content">
 									<p>
@@ -251,7 +251,7 @@
 							</div>
 						</div>
 
-						<div class="column is-half">
+						<div class="column is-12-mobile is-half-tablet" data-aos="flip-right">
 							<div class="card has-background-info">
 								<div class="card-content">
 									<p>

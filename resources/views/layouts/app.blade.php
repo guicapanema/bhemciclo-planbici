@@ -29,6 +29,9 @@
 	<!-- Styles -->
 	<link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
+	<!-- Scripts -->
+	<script src="{{ asset('js/app.js') }}" defer></script>
+
 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 </head>
@@ -126,7 +129,6 @@
 			</div>
 		</div>
 	</footer>
-	<!-- Scripts -->
-	<script src="{{ asset('js/app.js') }}"></script>
+
 </body>
 </html>

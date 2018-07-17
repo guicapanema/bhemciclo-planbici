@@ -5,13 +5,13 @@
 	<div class="container">
 
 		<div class="columns is-centered is-vcentered">
-			<div class="column is-4 content contato-title-container">
+			<div class="column is-4 content contato-title-container" data-aos="fade-right">
 				<div class="contato-circle-1"></div>
 				<div class="contato-bar"></div>
 				<h1 class="entre-contato">Entre em <span class="has-text-weight-bold is-underlined-dashed-white">Contato</span></h1>
 				<p class="has-text-weight-semibold has-margin-top-500">Qualquer dúvida, envie um email para bhemciclo@gmail.com ou preencha o formulário:</p>
 			</div>
-			<form class="column is-4 is-offset-2 contato-form-container" method="POST" action="/contato">
+			<form class="column is-4 is-offset-2 contato-form-container" method="POST" action="/contato"  data-aos="fade-left">
 
 				<div class="contato-circle-2"></div>
 
