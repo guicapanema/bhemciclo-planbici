@@ -10,6 +10,19 @@
 
 	<title>{{ config('app.name', 'Laravel') }}</title>
 
+	<link rel="home" href="https://www.planbicibh.org/">
+
+	<meta name="description" content="Conheça, participe e se aproprie do PlanBici BH - Plano de Mobilidade por Bicicleta de Belo Horizonte!">
+	<meta name="keywords" content="mobilidade,bicicleta,bh,belo horizonte,planbici">
+	<meta name="author" content="BH em Ciclo">
+
+	<meta property="og:site_name" content="{{ config('app.name', 'Laravel') }}">
+	<meta property="og:title" content="{{ config('app.name', 'Laravel') }}">
+	<meta property="og:description" content="Conheça, participe e se aproprie do PlanBici BH - Plano de Mobilidade por Bicicleta de Belo Horizonte!">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://www.planbicibh.org/">
+	<link rel="canonical" href="https://www.planbicibh.org/">
+
 	<link rel='dns-prefetch' href='//ajax.googleapis.com' />
 	<link rel='dns-prefetch' href='//fonts.googleapis.com' />
 
@@ -23,10 +36,16 @@
 	<nav class="navbar is-white">
 		<div class="container is-fluid">
 			<div class="navbar-brand has-text-weight-bold">
-					<img class="logo" src="/img/logo.png"></img>
+				<img class="logo" src="/img/logo.png"></img>
+
+				<a role="button" class="navbar-burger has-text-dark" data-target="navMenu" aria-label="menu" aria-expanded="false">
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+				</a>
 			</div>
 
-			<div class="navbar-menu">
+			<div class="navbar-menu" id="navMenu">
 				<div class="navbar-start">
 				</div>
 				<div class="navbar-end">
@@ -72,14 +91,14 @@
 			<div class="columns is-centered ">
 				<div class="column is-narrow">
 					<figure class="image is-48x48">
-						<a href="https://www.facebook.com/dialog/share?app_id=390669861344505&display=popup&href=https://planbicibh.org&redirect_uri=https://planbicibh.org" target="_blank">
+						<a href="https://www.facebook.com/hashtag/euqueroplanbici" target="_blank">
 							<img src="/img/facebook.png"></img>
 						</a>
 					</figure>
 				</div>
 				<div class="column is-narrow">
 					<figure class="image is-48x48">
-						<a href="https://twitter.com/intent/tweet?text=Conheça%2C compreenda e avalie o Plano de Mobilidade por bicicleta de BH - %E2%80%8B%23euqueroplanbici !%20%0Ahttps%3A%2F%2Fplanbicibh.org%2F%0AVia %40bhemciclo" target="_blank">
+						<a href="https://twitter.com/hashtag/euqueroplanbici" target="_blank">
 							<img src="/img/twitter.png"></img>
 						</a>
 					</figure>

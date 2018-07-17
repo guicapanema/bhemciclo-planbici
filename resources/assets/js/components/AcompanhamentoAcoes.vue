@@ -10,63 +10,51 @@
 				</div>
 			</div>
 			<div class="columns">
-				<div class="column">
+				<div class="column is-narrow">
 					<label class="label has-text-weight-semibold">Ano de início</label>
-					<div class="control has-icons-left">
+					<div class="control">
 						<span class="select">
 							<select v-model="filterYear">
 								<option :value="null">Todos</option>
 								<option v-for="year of availableYears" :value="year">{{ year }}</option>
 							</select>
 						</span>
-						<span class="icon is-small is-left">
-							<i class="far fa-calendar"></i>
-						</span>
 					</div>
 				</div>
 
-				<div class="column">
+				<div class="column is-narrow">
 					<label class="label has-text-weight-semibold">Eixo</label>
-					<div class="control has-icons-left">
+					<div class="control">
 						<span class="select">
 							<select v-model="filterAxis">
 								<option :value="null">Todos</option>
 								<option v-for="axis of availableAxes" :value="axis">{{ axis }}</option>
 							</select>
 						</span>
-						<span class="icon is-small is-left">
-							<i class="fas fa-th-large"></i>
-						</span>
 					</div>
 				</div>
 
-				<div class="column">
+				<div class="column is-narrow">
 					<label class="label has-text-weight-semibold">Status</label>
-					<div class="control has-icons-left">
+					<div class="control">
 						<span class="select">
 							<select v-model="filterStatus">
 								<option :value="null">Todos</option>
 								<option v-for="status of availableStatuses" :value="status">{{ status }}</option>
 							</select>
 						</span>
-						<span class="icon is-small is-left">
-							<i class="fas fa-thermometer-half"></i>
-						</span>
 					</div>
 				</div>
 
-				<div class="column">
+				<div class="column is-narrow">
 					<label class="label has-text-weight-semibold">Atraso</label>
-					<div class="control has-icons-left">
+					<div class="control">
 						<span class="select">
 							<select v-model="filterDelay">
 								<option :value="null">Todos</option>
 								<option :value="false">Não atrasada</option>
 								<option :value="true">Atrasada</option>
 							</select>
-						</span>
-						<span class="icon is-small is-left">
-							<i class="fas fa-clock"></i>
 						</span>
 					</div>
 				</div>

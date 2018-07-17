@@ -3,7 +3,7 @@
 @section('content')
 	<section class="section has-background-warning">
 		<div class="container content has-text-centered">
-			<h1 class="title is-size-1">
+			<h1 class="title is-size-1 is-double-spaced">
 				<span class="participe-title">
 					Pa<span class="is-underlined-success">rticipe</span> e Cobre
 					<img src="/img/participe/triangulo.png"></img>
