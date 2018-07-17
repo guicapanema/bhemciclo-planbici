@@ -16,8 +16,6 @@
         "cross-env": "^5.2.0",
         "jquery": "^3.2",
         "laravel-mix": "^2.0",
-        "lodash": "^4.17.10",
-        "moment": "^2.22.2",
         "popper.js": "^1.14.3",
         "vue": "^2.5.7"
     },
@@ -25,6 +23,7 @@
         "aos": "^2.3.3",
         "chart.js": "^2.7.2",
         "dayjs": "^1.7.4",
+        "moment": "^2.22.2",
         "rss-parser": "^3.4.2",
         "vue-chartjs": "^3.3.2"
     }

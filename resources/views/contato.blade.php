@@ -19,27 +19,27 @@
 				<div class="field">
 					<label class="label has-text-weight-semibold">Nome</label>
 					<div class="control">
-						<input class="input{{ $errors->has('nome') ? ' is-danger' : '' }}" type="text" id="nome" name="nome">
+						<input class="input{{ $errors->has('nome') ? ' is-dark' : '' }}" type="text" id="nome" name="nome">
 					</div>
-					@if ($errors->has('nome'))<p class="help is-danger">Por favor, digite seu nome</p>@endif
+					@if ($errors->has('nome'))<p class="help is-dark has-text-weight-semibold">Por favor, digite seu nome</p>@endif
 				</div>
 
 				<div class="field">
 					<label class="label has-text-weight-semibold">Email</label>
 					<div class="control">
-						<input class="input{{ $errors->has('email') ? ' is-danger' : '' }}" type="email" id="email" name="email">
+						<input class="input{{ $errors->has('email') ? ' is-dark' : '' }}" type="email" id="email" name="email">
 					</div>
-					@if ($errors->has('email'))<p class="help is-danger">Por favor, digite um e-mail válido</p>@endif
+					@if ($errors->has('email'))<p class="help is-dark has-text-weight-semibold">Por favor, digite um e-mail válido</p>@endif
 
 				</div>
 
 				<div class="field">
 					<label class="label has-text-weight-semibold">Mensagem</label>
 					<div class="control">
-						<textarea class="textarea{{ session('success') ? ' is-success' : '' }}{{ $errors->has('mensagem') ? ' is-danger' : '' }}" id="mensagem" name="mensagem"></textarea>
+						<textarea class="textarea{{ session('success') ? ' is-danger' : '' }}{{ $errors->has('mensagem') ? ' is-dark' : '' }}" id="mensagem" name="mensagem"></textarea>
 					</div>
-					@if (session('success'))<p class="help is-success">Mensagem enviada com sucesso!</p>@endif
-					@if ($errors->has('mensagem'))<p class="help is-danger">Por favor, digite uma mensagem</p>@endif
+					@if (session('success'))<p class="help is-danger has-text-weight-semibold">Mensagem enviada com sucesso!</p>@endif
+					@if ($errors->has('mensagem'))<p class="help is-dark has-text-weight-semibold">Por favor, digite uma mensagem</p>@endif
 				</div>
 
 				<div class="field is-pulled-right">

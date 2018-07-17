@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Mail;
 
 class ContactController extends Controller
 {
@@ -16,7 +17,7 @@ class ContactController extends Controller
 
 		$messageBody = "Mensagem de: " . request('nome') . " (" . request('email') . ")\r\n\r\n" . request('mensagem');
 		Mail::raw($messageBody, function($message) {
-			$message->from('guilherme@capanema.me', 'Formulário de contato planbicibh.org');
+			$message->from('bhemciclo@gmail.com', 'Formulário de contato planbicibh.org');
 			$message->to(getenv('MAIL_CONTACT_TO'));
 			$message->replyTo(request('email'), request('nome'));
 			$message->subject('Nova mensagem no planbicibh.org');
