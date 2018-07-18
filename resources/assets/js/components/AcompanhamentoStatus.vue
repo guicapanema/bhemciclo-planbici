@@ -85,7 +85,7 @@
 						.reduce((prev, next) => prev + next)
 						: 0;
 					let inProgressInvestments = this.inProgressActions.length ?
-						this.inProgressActions.length
+						this.inProgressActions
 						.map(action => action.amount_invested)
 						.reduce((prev, next) => prev + next)
 						: 0;

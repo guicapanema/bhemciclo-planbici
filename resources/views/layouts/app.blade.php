@@ -33,7 +33,23 @@
 	<script src="{{ asset('js/app.js') }}" defer></script>
 
 
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous" defer>
+
+	<!-- Matomo -->
+	<script type="text/javascript">
+		var _paq = _paq || [];
+		/* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+		_paq.push(['trackPageView']);
+		_paq.push(['enableLinkTracking']);
+		(function() {
+			var u="//stats.mobilidadebh.org/";
+			_paq.push(['setTrackerUrl', u+'piwik.php']);
+			_paq.push(['setSiteId', '2']);
+			var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+			g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+		})();
+	</script>
+	<!-- End Matomo Code -->
 </head>
 <body>
 	<nav class="navbar is-white">
@@ -86,32 +102,44 @@
 	</div>
 	<footer class="footer">
 		<div class="container has-margin-bottom-100">
+			<div class="columns">
+				<div class="column is-one-quarter is-offset-one-quarter has-text-centered">
+					<h5 class="has-text-weight-semibold">Realização:</h5>
+					<a href="http://bhemciclo.org/" target="_blank"><img src="/img/logo-bhec.png" class="logo-footer"></img></a>
+				</div>
+				<div class="column is-one-quarter has-text-centered">
+					<h5 class="has-text-weight-semibold">Apoio:</h5>
+					<a href="http://bicicletanosplanos.org/" target="_blank"><img src="/img/logo-pmu.png" class="logo-footer"></img></a>
+				</div>
+			</div>
+		</div>
+		<div class="container has-margin-bottom-100">
 			<div class="columns is-centered">
-				<div class="column is-narrow content">
+				<div class="column is-narrow has-text-centered content">
 					<h5 class="is-marginless">#euqueroplanbici</h5>
 				</div>
 			</div>
 			<div class="columns is-centered ">
 				<div class="column is-narrow">
-					<figure class="image is-48x48">
+					<figure class="image is-48x48" style="margin: auto">
 						<a href="https://www.facebook.com/hashtag/euqueroplanbici" target="_blank">
 							<img src="/img/facebook.png"></img>
 						</a>
 					</figure>
 				</div>
 				<div class="column is-narrow">
-					<figure class="image is-48x48">
+					<figure class="image is-48x48" style="margin: auto">
 						<a href="https://twitter.com/hashtag/euqueroplanbici" target="_blank">
 							<img src="/img/twitter.png"></img>
 						</a>
 					</figure>
 				</div>
 				<div class="column is-narrow">
-					<a href="https://www.instagram.com/explore/tags/euqueroplanbici/" target="_blank">
-						<figure class="image is-48x48">
+					<figure class="image is-48x48" style="margin: auto">
+						<a href="https://www.instagram.com/explore/tags/euqueroplanbici/" target="_blank">
 							<img src="/img/instagram.png"></img>
-						</figure>
-					</a>
+						</a>
+					</figure>
 				</div>
 			</div>
 		</div>

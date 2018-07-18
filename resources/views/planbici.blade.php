@@ -17,7 +17,7 @@
 		</h3>
 		<p>Em 2015 a BH em Ciclo participou juntamente com outros coletivos da cidade de  um laboratório de ação política pela mobilidade, promovido pela Escola de Ativismo, foram 10 meses de trabalho e planejamento que no final geraram um produto de incidência nas eleições municipais para o executivo em 2016.</p>
 		<p>Daí, foi criada a campanha #D1Passo, com objetivo de incluir e qualificar o tema mobilidade urbana no debate eleitoral. A campanha se mostrou efetiva e colheu uma série de compromissos da candidatura eleita em relação à mobilidade sustentável.</p>
-		<p>Desde janeiro de 2017, fizemos pressão para que o Prefeito hornasse os compromissos ao longo da campanha eleitora. Conseguimos uma reunião com prefeito. Nela, ele nos propôs a elaboração de um “plano para a bicicleta na cidade” daí surgiu o PlanBici.</p>
+		<p>Desde janeiro de 2017, fizemos pressão para que o Prefeito honrasse os compromissos ao longo da campanha eleitoral. Conseguimos uma reunião com prefeito. Nela, ele nos propôs a elaboração de um “plano para a bicicleta na cidade” daí surgiu o PlanBici.</p>
 
 
 		<h3 class="subtitle">
@@ -67,7 +67,7 @@
 			</div>
 		</div>
 
-		<div class="has-text-centered"><a class="button is-medium is-danger">Veja o documento completo</a></div>
+		<div class="has-text-centered"><a class="button is-medium is-danger" href="http://bhemciclo.org/wp-content/uploads/2017/10/PlanBici-1.pdf" target="_blank">Veja o documento completo</a></div>
 	</div>
 </section>
 

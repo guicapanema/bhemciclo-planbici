@@ -87,11 +87,11 @@
 									<div class="columns">
 										<div class="column">
 											<strong><small>Prevista:</small></strong><br />
-											{{ action.start_date_forecast }}
+											{{ moment(action.start_date_forecast).format('DD/MM/YYYY') }}
 										</div>
 										<div class="column">
 											<strong><small>Real:</small></strong><br />
-											{{ action.start_date_real ? action.start_date_real : 'Não iniciada' }}
+											{{ action.start_date_real ? moment(action.start_date_real).format('DD/MM/YYYY') : 'Não iniciada' }}
 										</div>
 									</div>
 								</div>
@@ -105,11 +105,11 @@
 									<div class="columns">
 										<div class="column">
 											<strong><small>Prevista:</small></strong><br />
-											{{ action.end_date_forecast }}
+											{{ moment(action.end_date_forecast).format('DD/MM/YYYY') }}
 										</div>
 										<div class="column">
 											<strong><small>Real:</small></strong><br />
-											{{ action.end_date_real ? action.end_date_real : 'Não finalizada' }}
+											{{ action.end_date_real ? moment(action.end_date_real).format('DD/MM/YYYY') : 'Não finalizada' }}
 										</div>
 									</div>
 								</div>
@@ -123,15 +123,15 @@
 							<div class="columns is-mobile">
 								<div class="column">
 									<strong><small>Valor previsto:</small></strong><br />
-									R$ {{ action.amount_forecast }}
+									{{ formatCurrency(action.amount_forecast) }}
 								</div>
 								<div class="column">
 									<strong><small>Recurso garantido:</small></strong><br />
-									R$ {{ action.amount_budgeted }}
+									{{ formatCurrency(action.amount_budgeted) }}
 								</div>
 								<div class="column">
 									<strong><small>Recurso investido:</small></strong><br />
-									R$ {{ action.amount_invested }}
+									{{ formatCurrency(action.amount_invested) }}
 								</div>
 							</div>
 							<div class="has-text-danger has-text-weight-semibold">
@@ -143,11 +143,11 @@
 							<div class="columns is-mobile">
 								<div class="column is-one-third">
 									<strong><small>Quantidade prevista:</small></strong><br />
-									{{ action.quantity_forecast + ' ' + action.quantity_unit }}
+									{{ action.quantity_forecast ? action.quantity_forecast + ' ' + action.quantity_unit : '-' }}
 								</div>
 								<div class="column is-one-third">
 									<strong><small>Quantidade executada:</small></strong><br />
-									{{ action.quantity_real + ' ' + action.quantity_unit }}
+									{{ action.quantity_forecast ? action.quantity_real + ' ' + action.quantity_unit : '-' }}
 								</div>
 							</div>
 						</div>
@@ -223,6 +223,13 @@
 					return matchDelay && matchSearch && matchStatus && matchYear;
 				});
 			},
+			formatCurrency(amount) {
+				let formatter = new Intl.NumberFormat('pt-BR', {
+					style: 'currency',
+					currency: 'BRL',
+				});
+				return formatter.format(amount);
+			},
 			getStatus(action) {
 				if (!action.start_date_real || moment(action.start_date_real).isAfter(this.currentDate)) { // Não iniciada
 					return this.availableStatuses[0];
@@ -234,6 +241,9 @@
 			},
 			getDelay(action) {
 				return (!action.start_date_real && moment(action.start_date_forecast).isSameOrBefore(this.currentDate));
+			},
+			moment() {
+				return moment();
 			}
 		}
 	}

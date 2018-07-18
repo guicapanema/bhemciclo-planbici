@@ -7,6 +7,10 @@
 
 @import "~bulma-slider/dist/bulma-slider";
 
+a {
+	word-wrap: break-word;
+}
+
 /* Classes utilitárias */
 .is-marginless {
 	margin-bottom: 0 !important;
@@ -137,6 +141,12 @@ div.divider {
 }
 
 /* Barra de navegação */
+
+.navbar-brand {
+	@media(max-width: 1023px) {
+		align-items: center !important;
+	}
+}
 
 img.logo {
 	display: block;
@@ -773,4 +783,9 @@ h1.faca-barulho {
 		right: -25%;
 		z-index: -1;
 	}
+}
+
+.logo-footer {
+	max-width: 150px;
+	margin: 1em;
 }

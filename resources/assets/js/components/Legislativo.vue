@@ -21,66 +21,65 @@
 			<div class="modal-background"></div>
 			<div class="modal-content">
 				<div class="box">
-					<article class="media">
-						<div class="media-left">
+					<div class="columns">
+						<div class="column is-one-fifth">
 							<figure class="image is-96x96">
 								<img :src="selectedCouncilor.image" alt="Image">
 							</figure>
 						</div>
-						<div class="media-content">
-							<div class="content">
-								<h3>{{selectedCouncilor.name}}</h3>
-								<p v-if="!selectedCouncilor.supports.length">
-									Não apoiou o PlanBici!
-								</p>
-								<p v-if="selectedCouncilor.supports.length">
-									Apoiou o PlanBici:
-									<ul>
-										<li v-for="support of selectedCouncilor.supports">
-											<strong>{{ support.date }}</strong> - {{ support.description }}
-										</li>
-									</ul>
-								</p>
-								<div>
-									<div v-if="selectedCouncilor.phone" >
-										<span class="icon is-small">
-											<i class="fas fa-phone"></i>
-										</span>&nbsp;
-										{{selectedCouncilor.phone}}
-									</div>
-									<div v-if="selectedCouncilor.email">
-										<span class="icon is-small">
-											<i class="fas fa-envelope"></i>
-										</span>&nbsp;
-										<a :href="'mailto:' + selectedCouncilor.email" target="_blank">
-											{{selectedCouncilor.email}}
-										</a>
-									</div>
-									<div v-if="selectedCouncilor.facebook">
-										<span class="icon is-small">
-											<i class="fab fa-facebook"></i>
-										</span>&nbsp;
-										<a :href="selectedCouncilor.facebook" target="_blank">
-											{{selectedCouncilor.facebook}}
-										</a>
-									</div>
-									<div v-if="selectedCouncilor.twitter">
-										<span class="icon is-small">
-											<i class="fab fa-twitter"></i>
-										</span>&nbsp;
-										<a :href="selectedCouncilor.twitter" target="_blank">
-											{{selectedCouncilor.twitter}}
-										</a>
-									</div>
+						<div class="column content">
+							<h3>
+								{{selectedCouncilor.name}}
+								<button @click="onModalClose()" class="delete is-medium is-pulled-right is-hidden-mobile" aria-label="close"></button>
+							</h3>
+							<p v-if="!selectedCouncilor.supports.length">
+								Não apoiou o PlanBici!
+							</p>
+							<p v-if="selectedCouncilor.supports.length">
+								Apoiou o PlanBici:
+								<ul>
+									<li v-for="support of selectedCouncilor.supports">
+										<strong>{{ support.date }}</strong> - <span v-html="support.description"></span>
+									</li>
+								</ul>
+							</p>
+							<div>
+								<div v-if="selectedCouncilor.phone" >
+									<span class="icon is-small">
+										<i class="fas fa-phone"></i>
+									</span>&nbsp;
+									{{selectedCouncilor.phone}}
+								</div>
+								<div v-if="selectedCouncilor.email">
+									<span class="icon is-small">
+										<i class="fas fa-envelope"></i>
+									</span>&nbsp;
+									<a :href="'mailto:' + selectedCouncilor.email" target="_blank">
+										{{selectedCouncilor.email}}
+									</a>
+								</div>
+								<div v-if="selectedCouncilor.facebook">
+									<span class="icon is-small">
+										<i class="fab fa-facebook"></i>
+									</span>&nbsp;
+									<a :href="selectedCouncilor.facebook" target="_blank">
+										{{selectedCouncilor.facebook}}
+									</a>
+								</div>
+								<div v-if="selectedCouncilor.twitter">
+									<span class="icon is-small">
+										<i class="fab fa-twitter"></i>
+									</span>&nbsp;
+									<a :href="selectedCouncilor.twitter" target="_blank">
+										{{selectedCouncilor.twitter}}
+									</a>
 								</div>
 							</div>
 						</div>
-						<div class="media-right">
-							<button @click="onModalClose()" class="delete is-medium" aria-label="close"></button>
-						</div>
-					</article>
+					</div>
 				</div>
 			</div>
+			<button @click="onModalClose()" class="modal-close is-large is-hidden-tablet" aria-label="close"></button>
 		</div>
     </div>
 </template>
