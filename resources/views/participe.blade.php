@@ -28,7 +28,7 @@
 				</div>
 				<div class="column content apoie" data-aos="fade-left">
 					<h2 class="title is-double-spaced">Faça um <span class="is-underlined-success">vídeo pessoal</span> de apoio ao PlanBici</h2>
-					<p>Com o celular na posição horizontal, com a câmera apontada para a sua esquerda, grave um vídeo de ATÉ 45 segundos.</p>
+					<p>Com o celular na posição horizontal, <a href="/img/camera-esquerda.jpg" target="_blank" class="has-text-weight-semibold">com a câmera apontada para a sua esquerda</a>, grave um vídeo de ATÉ 45 segundos.</p>
 					<ul>
 						<li>Se identifique com nome, região da cidade onde mora e há quanto tempo pedala.</li>
 						<li>Diga o que achar interessante sobre experiências de pedalar em BH, o que você que está bom, o que pode melhorar, etc.</li>
@@ -56,7 +56,6 @@
 					<ul>
 						<li>Organize <a href="http://bikeanjo.org/2011/07/27/pegue-um-bonde-para-a-bicicletada-de-sao-paulo/" target="_blank" class="has-text-weight-semibold">Bondes de Bike</a> para o trabalho ou para seus eventos;</li>
 						<li>Organize um Café da Manhã para quem chegar a pé, de bicicleta, carona ou transporte público como <a href="http://bikeelegal.com/de-bike-ao-trabalho-cafe-da-manha-dos-ciclistas/" target="_blank" class="has-text-weight-semibold">ESTE AQUI</a>;</li>
-						<li>Distribua uma Cartilha de Dicas para seus funcionários como ESTAS AQUI;</li>
 						<li>Dialogue com os demais funcionários sobre a ampliação da infraestrutura do seu escritório para ciclistas e pedestre, como um <a href="http://ciclovivo.com.br/arq-urb/mobilidade/com-mais-ciclistas-predio-comercial-amplia-bicicletario-em-sp/" target="_blank" class="has-text-weight-semibold">Bicicletário</a> ou um Vestiário;</li>
 						<li>Organize um evento para discutir a mobilidade na sua empresa como <a href="http://nossasaopaulo.org.br/agenda-cidada/debate-bike-na-cidade-de-sao-paulo" target="_blank" class="has-text-weight-semibold">ESTE AQUI</a>;</li>
 						<li>Elabore uma Pesquisa com seus funcionários, como <a href="http://transporteativo.org.br/ta/?page_id=11178" target="_blank" class="has-text-weight-semibold">Contagem de Ciclistas</a> ou <a href="https://issuu.com/cidadeativa/docs/150821_ca_relatorio_paulistaaberta" target="_blank" class="has-text-weight-semibold">Painéis Interativos</a>;</li>
