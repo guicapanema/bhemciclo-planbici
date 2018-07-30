@@ -19,6 +19,7 @@
 	<meta property="og:site_name" content="{{ config('app.name', 'Laravel') }}">
 	<meta property="og:title" content="{{ config('app.name', 'Laravel') }}">
 	<meta property="og:description" content="Conheça, participe e se aproprie do PlanBici BH - Plano de Mobilidade por Bicicleta de Belo Horizonte!">
+	<meta property="og:image" content="https://www.planbicibh.org/img/compartilhar.jpeg">
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="https://www.planbicibh.org/">
 	<link rel="canonical" href="https://www.planbicibh.org/">
