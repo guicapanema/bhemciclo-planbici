@@ -36,7 +36,7 @@
 				<div class="field">
 					<label class="label has-text-weight-semibold">Mensagem</label>
 					<div class="control">
-						<textarea class="textarea{{ session('success') ? ' is-danger' : '' }}{{ $errors->has('mensagem') ? ' is-dark' : '' }}" id="mensagem" name="mensagem" value="{{ old('mensagem') }}"></textarea>
+						<textarea class="textarea{{ session('success') ? ' is-danger' : '' }}{{ $errors->has('mensagem') ? ' is-dark' : '' }}" id="mensagem" name="mensagem">{{ old('mensagem') }}</textarea>
 					</div>
 					@if (session('success'))<p class="help is-danger has-text-weight-semibold">Mensagem enviada com sucesso!</p>@endif
 					@if ($errors->has('mensagem'))<p class="help is-dark has-text-weight-semibold">Por favor, digite uma mensagem</p>@endif
