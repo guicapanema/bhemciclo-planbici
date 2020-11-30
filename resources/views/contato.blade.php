@@ -19,7 +19,7 @@
 				<div class="field">
 					<label class="label has-text-weight-semibold">Nome</label>
 					<div class="control">
-						<input class="input{{ $errors->has('nome') ? ' is-dark' : '' }}" type="text" id="nome" name="nome">
+						<input class="input{{ $errors->has('nome') ? ' is-dark' : '' }}" type="text" id="nome" name="nome" value="{{ old('nome') }}">
 					</div>
 					@if ($errors->has('nome'))<p class="help is-dark has-text-weight-semibold">Por favor, digite seu nome</p>@endif
 				</div>
@@ -27,7 +27,7 @@
 				<div class="field">
 					<label class="label has-text-weight-semibold">Email</label>
 					<div class="control">
-						<input class="input{{ $errors->has('email') ? ' is-dark' : '' }}" type="email" id="email" name="email">
+						<input class="input{{ $errors->has('email') ? ' is-dark' : '' }}" type="email" id="email" name="email" value="{{ old('email') }}">
 					</div>
 					@if ($errors->has('email'))<p class="help is-dark has-text-weight-semibold">Por favor, digite um e-mail válido</p>@endif
 
@@ -36,10 +36,17 @@
 				<div class="field">
 					<label class="label has-text-weight-semibold">Mensagem</label>
 					<div class="control">
-						<textarea class="textarea{{ session('success') ? ' is-danger' : '' }}{{ $errors->has('mensagem') ? ' is-dark' : '' }}" id="mensagem" name="mensagem"></textarea>
+						<textarea class="textarea{{ session('success') ? ' is-danger' : '' }}{{ $errors->has('mensagem') ? ' is-dark' : '' }}" id="mensagem" name="mensagem" value="{{ old('mensagem') }}"></textarea>
 					</div>
 					@if (session('success'))<p class="help is-danger has-text-weight-semibold">Mensagem enviada com sucesso!</p>@endif
 					@if ($errors->has('mensagem'))<p class="help is-dark has-text-weight-semibold">Por favor, digite uma mensagem</p>@endif
+				</div>
+
+				<div class="field field-message">
+					<label class="label" for="message" value="{{ old('message') }}">Deixe vazio</label>
+					<div class="control">
+						<input id="message" name="message" value="{{ old('message') }}" />
+					</div>
 				</div>
 
 				<div class="field is-pulled-right">
