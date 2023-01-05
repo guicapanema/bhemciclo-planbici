@@ -15,7 +15,7 @@
         "bulma-slider": "^1.0.4",
         "cross-env": "^5.2.0",
         "jquery": "^3.2",
-        "laravel-mix": "^2.0",
+        "laravel-mix": "^6.0",
         "popper.js": "^1.14.3",
         "vue": "^2.5.7"
     },
